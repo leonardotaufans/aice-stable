@@ -1,0 +1,4 @@
+2021-09-17 01:11:20.165  INFO 12612 --- [XNIO-1 task-3] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /[0:0:0:0:0:0:0:1]:61064
+2021-09-17 01:11:20.464  INFO 12612 --- [XNIO-1 task-3] lavalink.server.io.SocketServer          : Connection successfully established from /[0:0:0:0:0:0:0:1]:61064
+2021-09-17 01:11:32.448  INFO 12612 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /[0:0:0:0:0:0:0:1]:61064 -- CloseStatus[code=1006, reason=]
+2021-09-17 01:11:32.497  INFO 12612 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
