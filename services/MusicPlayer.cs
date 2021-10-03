@@ -235,6 +235,18 @@ namespace aice_stable.services
         }
 
         /// <summary>
+        /// Returns number of queue in playlist.
+        /// </summary>
+        /// <returns> Number of items in playlist </returns>
+        public int PlaylistQueue()
+        {
+            lock (QueueInternal)
+            {
+                return QueueInternal.Count;
+            }
+        }
+
+        /// <summary>
         /// Shuffles the playback queue.
         /// </summary>
         public void Shuffle()

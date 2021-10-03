@@ -1,25 +1,26 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>aice_stable</RootNamespace>
-	  <TargetIdentifier>win10-x64,linux-x64</TargetIdentifier>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DefineConstants>TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <DebugSymbols>true</DebugSymbols>
-    <NoWarn />
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="DSharpPlus" Version="4.2.0-nightly-00988" />
-    <PackageReference Include="DSharpPlus.CommandsNext" Version="4.2.0-nightly-00988" />
-    <PackageReference Include="DSharpPlus.Interactivity" Version="4.2.0-nightly-00988" />
-    <PackageReference Include="DSharpPlus.VoiceNext" Version="4.2.0-nightly-00988" />
-    <PackageReference Include="DSharpPlus.Lavalink" Version="4.2.0-nightly-00988" />
-    <PackageReference Include="IDoEverything.DSharpPlus.SlashCommands" Version="2.0.3" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.7" />
-    <PackageReference Include="StackExchange.Redis" Version="2.2.50" />
-    
-  </ItemGroup>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<RootNamespace>aice_stable</RootNamespace>
+		<TargetIdentifier>win10-x64,linux-x64</TargetIdentifier>
+		<PublishSingleFile>true</PublishSingleFile>
+		<RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+    	<SelfContained>true</SelfContained>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DefineConstants>TRACE</DefineConstants>
+		<DebugType>full</DebugType>
+		<DebugSymbols>true</DebugSymbols>
+		<NoWarn/>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="DSharpPlus" Version="4.1.0"/>
+		<PackageReference Include="DSharpPlus.CommandsNext" Version="4.1.0"/>
+		<PackageReference Include="DSharpPlus.Interactivity" Version="4.1.0"/>
+		<PackageReference Include="DSharpPlus.VoiceNext" Version="4.1.0"/>
+		<PackageReference Include="DSharpPlus.Lavalink" Version="4.1.0"/>
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10"/>
+		<PackageReference Include="StackExchange.Redis" Version="2.2.62"/>
+	</ItemGroup>
 </Project>

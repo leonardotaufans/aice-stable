@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.Lavalink;
 using DSharpPlus.Net;
-using DSharpPlus.SlashCommands;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.Entities;
 using System.IO;

@@ -12,6 +12,7 @@ using Emzi0767.Utilities;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
@@ -66,7 +67,7 @@ namespace aice_stable
                     LargeThreshold = 250
                 });
             discord.Ready += DiscordReady;
-
+            discord.VoiceStateUpdated += VoiceStateUpdated;
             /// The list of services used to run this bot
             Services = new ServiceCollection()
                 .AddTransient<SecureRandom>()
@@ -131,6 +132,47 @@ namespace aice_stable
             } catch (Exception e)
             {
                 client.Logger.LogError("GameTimerCallback", $"Could not update presence ({e.GetType()}: {e.Message})");
+            }
+        }
+
+        ///<summary>
+        ///Checks if the Discord voice channel is empty
+        ///and if it is, stopping the music.
+        ///</summary>
+        private async Task VoiceStateUpdated(DiscordClient client, VoiceStateUpdateEventArgs voiceState)
+        {
+            var music = this.Services.GetService<MusicServices>();
+            var guildMusicData = await music.GetOrCreateDataAsync(voiceState.Guild);
+            /// This is *probably* to stop and leave the channel
+            /// once the playlist is empty and the channel is empty.
+            /// More testing required.
+            /// Thanks, poor documentation :)
+            if (voiceState.After.Channel == null && voiceState.User == this.discord.CurrentUser)
+            {
+                await guildMusicData.StopAsync();
+                await guildMusicData.DestroyPlayerAsync();
+                return;
+            }
+            /// 
+            
+            if (voiceState.User == this.discord.CurrentUser)
+                return;
+            
+            var channel = guildMusicData.Channel;
+            if (channel == null || channel != voiceState.Before.Channel)
+                return;
+
+            var users = channel.Users;
+            if (guildMusicData.IsPlaying && !users.Any(x => !x.IsBot))
+            {
+                await guildMusicData.PauseAsync();
+                await guildMusicData.SaveAsync();
+
+                if (guildMusicData.CommandChannel != null)
+                {
+                    await guildMusicData.CommandChannel.SendMessageAsync
+                        ($"{DiscordEmoji.FromName(client, ":play_pause:")} All users left the channel. Pausing playback. To resume, rejoin the channel and use the command 'resume'.");
+                }
             }
         }
     }

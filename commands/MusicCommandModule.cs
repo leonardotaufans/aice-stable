@@ -1,4 +1,5 @@
-﻿using DSharpPlus;
+﻿using System.Runtime.InteropServices.ComTypes;
+using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
@@ -67,8 +68,8 @@ public class MusicCommandModule : BaseCommandModule
         /// <returns></returns>
         public override async Task BeforeExecutionAsync(CommandContext ctx)
         {
-            var voiceState = ctx.Member.VoiceState;
-            var channel = voiceState?.Channel;
+            var voiceState = ctx.Member.VoiceState;     /// Getting the requesting member's voice state
+            var channel = voiceState?.Channel;          /// And getting its channel
 
             if (channel == null)
             {
@@ -76,16 +77,16 @@ public class MusicCommandModule : BaseCommandModule
                     $"You need to be in a voice channel.");
                 return;
             }
-            var member = ctx.Guild.CurrentMember?.VoiceState?.Channel;
-            if (member != null && channel != member)
-            {
+            var member = ctx.Guild.CurrentMember?.VoiceState?.Channel;  /// This is to stop the requesting member
+            if (member != null && channel != member)                    /// to command the bot without even 
+            {                                                           /// joining the same channel.
                 await ctx.RespondAsync($"{DiscordEmoji.FromName(ctx.Client, ":msraisedhand:")} " +
                     $"You need to be in the same voice channel.");
                 return;
             }
             this.MusicPlayer = await this.Music.GetOrCreateDataAsync(ctx.Guild);
-            this.MusicPlayer.CommandChannel = ctx.Channel;
-            await base.BeforeExecutionAsync(ctx);
+            this.MusicPlayer.CommandChannel = ctx.Channel;              /// Still haven't figured out its uses.
+            await base.BeforeExecutionAsync(ctx);               
         }
 
         /// <summary>
@@ -246,10 +247,11 @@ public class MusicCommandModule : BaseCommandModule
         [Command("stop"), Description("Stops playback and quits the voice channel.")]
         public async Task StopAsync(CommandContext ctx)
         {
-            int rmd = this.MusicPlayer.EmptyQueue();
+            int queue = this.MusicPlayer.PlaylistQueue();
+            this.MusicPlayer.EmptyQueue();
             await this.MusicPlayer.StopAsync();
             await this.MusicPlayer.DestroyPlayerAsync();
-            await ctx.RespondAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} Removed {rmd+1:#,##0} tracks from the queue.");
+            await ctx.RespondAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} Removed {queue+1:#,##0} tracks from the queue.");
         }
 
         [Command("pause"), Description("Pauses playback.")]
@@ -440,5 +442,13 @@ public class MusicCommandModule : BaseCommandModule
             await ctx.RespondAsync($"Greetings, {user.Mention}.");
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        [Command("ping"), Description("Checks the connection to the server.")]
+        public async Task PingCommand(CommandContext context)
+        {
+            await context.RespondAsync($"Ping: {context.Client.Ping}ms");
+        }
     }
 }

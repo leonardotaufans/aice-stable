@@ -30,73 +30,141 @@
 /home/leonardots/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.dll
 /home/leonardots/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.pdb
 /home/leonardots/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.genruntimeconfig.cache
-E:\aice-stable\bin\Debug\netcoreapp3.1\aice-stable.exe
-E:\aice-stable\bin\Debug\netcoreapp3.1\aice-stable.deps.json
-E:\aice-stable\bin\Debug\netcoreapp3.1\aice-stable.runtimeconfig.json
-E:\aice-stable\bin\Debug\netcoreapp3.1\aice-stable.runtimeconfig.dev.json
-E:\aice-stable\bin\Debug\netcoreapp3.1\aice-stable.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\aice-stable.pdb
-E:\aice-stable\bin\Debug\netcoreapp3.1\ConcurrentCollections.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\DSharpPlus.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\DSharpPlus.CommandsNext.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\DSharpPlus.Interactivity.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\DSharpPlus.Lavalink.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\DSharpPlus.VoiceNext.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Emzi0767.Common.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\DSharpPlus.SlashCommands.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Npgsql.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\Pipelines.Sockets.Unofficial.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\StackExchange.Redis.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.Security.Principal.Windows.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\System.Windows.Extensions.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\libopus.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\libsodium.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\libopus.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\libsodium.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\Microsoft.Win32.Registry.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Security.AccessControl.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
-E:\aice-stable\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-E:\aice-stable\obj\Debug\netcoreapp3.1\aice-stable.csproj.AssemblyReference.cache
-E:\aice-stable\obj\Debug\netcoreapp3.1\aice-stable.GeneratedMSBuildEditorConfig.editorconfig
-E:\aice-stable\obj\Debug\netcoreapp3.1\aice-stable.AssemblyInfoInputs.cache
-E:\aice-stable\obj\Debug\netcoreapp3.1\aice-stable.AssemblyInfo.cs
-E:\aice-stable\obj\Debug\netcoreapp3.1\aice-stable.csproj.CoreCompileInputs.cache
-E:\aice-stable\obj\Debug\netcoreapp3.1\aice-stable.csproj.CopyComplete
-E:\aice-stable\obj\Debug\netcoreapp3.1\aice-stable.dll
-E:\aice-stable\obj\Debug\netcoreapp3.1\aice-stable.pdb
-E:\aice-stable\obj\Debug\netcoreapp3.1\aice-stable.genruntimeconfig.cache
+E:/aice-stable/bin/Debug/netcoreapp3.1/aice-stable.exe
+E:/aice-stable/bin/Debug/netcoreapp3.1/aice-stable.deps.json
+E:/aice-stable/bin/Debug/netcoreapp3.1/aice-stable.runtimeconfig.json
+E:/aice-stable/bin/Debug/netcoreapp3.1/aice-stable.runtimeconfig.dev.json
+E:/aice-stable/bin/Debug/netcoreapp3.1/aice-stable.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/aice-stable.pdb
+E:/aice-stable/bin/Debug/netcoreapp3.1/ConcurrentCollections.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/DSharpPlus.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/DSharpPlus.CommandsNext.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/DSharpPlus.Interactivity.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/DSharpPlus.Lavalink.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/DSharpPlus.VoiceNext.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Emzi0767.Common.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/DSharpPlus.SlashCommands.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Win32.Registry.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Npgsql.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/Pipelines.Sockets.Unofficial.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/StackExchange.Redis.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.ComponentModel.Annotations.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.Diagnostics.PerformanceCounter.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.Drawing.Common.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.IO.Pipelines.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.Security.AccessControl.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.Security.Permissions.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.Security.Principal.Windows.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.Threading.Channels.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/System.Windows.Extensions.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/libopus.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/libsodium.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/libopus.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/libsodium.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
+E:/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+E:/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.csproj.AssemblyReference.cache
+E:/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.GeneratedMSBuildEditorConfig.editorconfig
+E:/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.AssemblyInfoInputs.cache
+E:/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.AssemblyInfo.cs
+E:/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.csproj.CoreCompileInputs.cache
+E:/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.csproj.CopyComplete
+E:/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.dll
+E:/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.pdb
+E:/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.genruntimeconfig.cache
+/media/leonardots/SSD Storage/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.csprojAssemblyReference.cache
+/media/leonardots/SSD Storage/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.AssemblyInfoInputs.cache
+/media/leonardots/SSD Storage/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.AssemblyInfo.cs
+/media/leonardots/SSD Storage/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.csproj.CoreCompileInputs.cache
+/media/leonardots/SSD Storage/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.dll
+/media/leonardots/SSD Storage/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.pdb
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/aice-stable
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/aice-stable.deps.json
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/aice-stable.runtimeconfig.json
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/aice-stable.runtimeconfig.dev.json
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/aice-stable.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/aice-stable.pdb
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/ConcurrentCollections.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/DSharpPlus.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/DSharpPlus.CommandsNext.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/DSharpPlus.Interactivity.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/DSharpPlus.Lavalink.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/DSharpPlus.VoiceNext.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Emzi0767.Common.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Win32.Registry.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Microsoft.Win32.SystemEvents.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Npgsql.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/Pipelines.Sockets.Unofficial.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/StackExchange.Redis.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.Collections.Immutable.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.ComponentModel.Annotations.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.Diagnostics.PerformanceCounter.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.Drawing.Common.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.IO.Pipelines.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.Security.AccessControl.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.Security.Permissions.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.Security.Principal.Windows.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.Threading.Channels.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/System.Windows.Extensions.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/libopus.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/libsodium.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/libopus.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/libsodium.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Diagnostics.PerformanceCounter.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/System.Security.Principal.Windows.dll
+/media/leonardots/SSD Storage/aice-stable/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+/media/leonardots/SSD Storage/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.csproj.CopyComplete
+/media/leonardots/SSD Storage/aice-stable/obj/Debug/netcoreapp3.1/aice-stable.genruntimeconfig.cache
