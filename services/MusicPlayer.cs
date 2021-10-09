@@ -1,6 +1,5 @@
 ﻿using aice_stable.models;
 using aice_stable.Models;
-using aice_stable.services;
 using aice_stable.Services;
 using DSharpPlus.Entities;
 using DSharpPlus.Lavalink;
@@ -12,7 +11,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 

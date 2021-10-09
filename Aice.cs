@@ -18,6 +18,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using aice_stable.commands;
 
 namespace aice_stable
 {
@@ -71,6 +72,7 @@ namespace aice_stable
             /// The list of services used to run this bot
             Services = new ServiceCollection()
                 .AddTransient<SecureRandom>()
+                .AddSingleton<StandardCommandModule>()
                 .AddSingleton<MusicServices>()
                 .AddSingleton(new LavalinkService(cfg.Lavalink, discord))
                 .AddSingleton(new YoutubeSearchProvider(cfg.Youtube))
@@ -143,16 +145,7 @@ namespace aice_stable
         {
             var music = this.Services.GetService<MusicServices>();
             var guildMusicData = await music.GetOrCreateDataAsync(voiceState.Guild);
-            /// This is *probably* to stop and leave the channel
-            /// once the playlist is empty and the channel is empty.
-            /// More testing required.
-            /// Thanks, poor documentation :)
-            if (voiceState.After.Channel == null && voiceState.User == this.discord.CurrentUser)
-            {
-                await guildMusicData.StopAsync();
-                await guildMusicData.DestroyPlayerAsync();
-                return;
-            }
+            
             /// 
             
             if (voiceState.User == this.discord.CurrentUser)
@@ -174,6 +167,21 @@ namespace aice_stable
                         ($"{DiscordEmoji.FromName(client, ":play_pause:")} All users left the channel. Pausing playback. To resume, rejoin the channel and use the command 'resume'.");
                 }
             }
+            if (voiceState.After.Channel != null) {
+                Console.WriteLine($"voice state {voiceState.After?.Channel}");
+            }
+            /// This is to stop the music and destroy the player
+            /// once the channel is empty.
+            /// More testing required.
+            /// Thanks, poor documentation :)
+            if (voiceState.After.Channel == null && voiceState.User == this.discord.CurrentUser)
+                {
+                    await guildMusicData.CommandChannel.SendMessageAsync("Destroying Music Channel...");
+                    await guildMusicData.StopAsync();
+                    await guildMusicData.DestroyPlayerAsync();
+                    return;
+                }
+            
         }
     }
 }

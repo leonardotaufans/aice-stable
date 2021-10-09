@@ -1,12 +1,10 @@
-﻿using System.Runtime.InteropServices.ComTypes;
-using DSharpPlus;
+﻿using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.Lavalink;
 using aice_stable.Models;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Immutable;
@@ -21,7 +19,7 @@ using DSharpPlus.Interactivity.Enums;
 
 namespace aice_stable.commands
 {
-[ModuleLifespan(ModuleLifespan.Transient)]
+    [ModuleLifespan(ModuleLifespan.Transient)]
 public class MusicCommandModule : BaseCommandModule
     {
         private static ImmutableDictionary<int, DiscordEmoji> NumberMappings { get; }
@@ -98,6 +96,11 @@ public class MusicCommandModule : BaseCommandModule
         [Command("play"), Description("Plays a song from URL or search."), Aliases("p"), Priority(1)]
         public async Task PlayAsync(CommandContext ctx, [Description("URL to play from.")] Uri uri)
         {
+            if (uri == null)
+            {
+                await ctx.RespondAsync("You must provide a URL to play from.");
+                return;
+            }
             var trackLoad = await Music.GetTracksAsync(uri);
             var tracks = trackLoad.Tracks;
             if (trackLoad.LoadResultType == LavalinkLoadResultType.LoadFailed || !tracks.Any())
@@ -148,6 +151,11 @@ public class MusicCommandModule : BaseCommandModule
         public async Task PlayAsync(CommandContext ctx,
             [RemainingText, Description("Search query")] string query)
         {
+            if (query == null)
+            {
+                await ctx.RespondAsync("You must provide a text to play from.");
+                return;
+            }
             var interactivity = ctx.Client.GetInteractivity();
             var results = await Youtube.SearchAsync(query);
 
@@ -162,13 +170,12 @@ public class MusicCommandModule : BaseCommandModule
             msgContent = $"{msgContent}\n\nType a number 1-{results.Count()} to queue a track. To cancel, type cancel or {Numbers.Last()}.";
             var message = await ctx.RespondAsync(msgContent);
             var answer = await interactivity.WaitForMessageAsync(x => x.Author == ctx.User, TimeSpan.FromSeconds(30));
-
             if (answer.TimedOut || answer.Result == null)
             {
                 await message.ModifyAsync($"{DiscordEmoji.FromName(ctx.Client, ":msfrown:")} No choice was made.");
                 return;
             }
-
+            
             var resultIndex = answer.Result.Content.Trim();
             if (!int.TryParse(resultIndex, NumberStyles.Integer, CultureInfo.InvariantCulture, out var elInd))
             {
@@ -309,6 +316,15 @@ public class MusicCommandModule : BaseCommandModule
         public async Task RepeatAsync(CommandContext ctx,
             [Description("Repeat mode. Can be all, single, or none.")] string mode = null)
         {
+            if (mode == null)
+            {
+                await ctx.RespondAsync($"Repeat options: \n```all | single | none```" + 
+                                        $"\nCurrent mode: {this.MusicPlayer.RepeatMode}");
+                var repeatModeConverter = new RepeatModeConverter();
+                repeatModeConverter.ToString(this.MusicPlayer.RepeatMode);
+                return;
+            }
+
             var rmc = new RepeatModeConverter();
             if (!rmc.TryFromString(mode, out var rm))
             {
@@ -417,38 +433,6 @@ public class MusicCommandModule : BaseCommandModule
         public async Task PlayerInfoAsync(CommandContext ctx)
         {
             await ctx.RespondAsync($"Queue length: {this.MusicPlayer.Queue.Count}\nIs shuffled? {(this.MusicPlayer.IsShuffled ? "Yes" : "No")}\nRepeat mode: {this.MusicPlayer.RepeatMode}\nVolume: {this.MusicPlayer.Volume}%");
-        }
-
-
-
-
-
-
-
-
-        /// <summary>
-        /// These are just for debugging purposes.
-        /// </summary>
-        /// <param name="ctx"></param>
-        /// <returns></returns>
-        [Command("greet")]
-        public async Task GreetCommand(CommandContext ctx)
-        {
-            await ctx.RespondAsync("Greetings, human.");
-        }
-        [Command("greet")]
-        public async Task GreetCommand(CommandContext ctx, [Description("Tag the user.")] DiscordUser user)
-        {
-            await ctx.RespondAsync($"Greetings, {user.Mention}.");
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [Command("ping"), Description("Checks the connection to the server.")]
-        public async Task PingCommand(CommandContext context)
-        {
-            await context.RespondAsync($"Ping: {context.Client.Ping}ms");
         }
     }
 }

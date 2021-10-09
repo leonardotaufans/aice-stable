@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using DSharpPlus.Entities;
 using DSharpPlus.Lavalink;
-using Microsoft.EntityFrameworkCore;
+// using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 namespace aice_stable.Models
 {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/media/leonardots/SSD Storage/aice-stable/aice-stable.csproj": {}
+    "/media/leonardots/SSD Storage1/aice-stable/aice-stable.csproj": {}
   },
   "projects": {
-    "/media/leonardots/SSD Storage/aice-stable/aice-stable.csproj": {
+    "/media/leonardots/SSD Storage1/aice-stable/aice-stable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/leonardots/SSD Storage/aice-stable/aice-stable.csproj",
+        "projectUniqueName": "/media/leonardots/SSD Storage1/aice-stable/aice-stable.csproj",
         "projectName": "aice-stable",
-        "projectPath": "/media/leonardots/SSD Storage/aice-stable/aice-stable.csproj",
+        "projectPath": "/media/leonardots/SSD Storage1/aice-stable/aice-stable.csproj",
         "packagesPath": "/home/leonardots/.nuget/packages/",
-        "outputPath": "/media/leonardots/SSD Storage/aice-stable/obj/",
+        "outputPath": "/media/leonardots/SSD Storage1/aice-stable/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/leonardots/.nuget/NuGet/NuGet.Config"
@@ -55,10 +55,6 @@
             "DSharpPlus.VoiceNext": {
               "target": "Package",
               "version": "[4.1.0, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[5.0.10, )"
             },
             "StackExchange.Redis": {
               "target": "Package",
