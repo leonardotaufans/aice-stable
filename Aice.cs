@@ -13,9 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using aice_stable.commands;
@@ -74,6 +72,7 @@ namespace aice_stable
                 .AddTransient<SecureRandom>()
                 .AddSingleton<StandardCommandModule>()
                 .AddSingleton<MusicServices>()
+                .AddSingleton<NewMusicPlayerModule>()
                 .AddSingleton(new LavalinkService(cfg.Lavalink, discord))
                 .AddSingleton(new YoutubeSearchProvider(cfg.Youtube))
                 .AddSingleton(new RedisClient(cfg.Redis))
@@ -145,9 +144,6 @@ namespace aice_stable
         {
             var music = this.Services.GetService<MusicServices>();
             var guildMusicData = await music.GetOrCreateDataAsync(voiceState.Guild);
-            
-            /// 
-            
             if (voiceState.User == this.discord.CurrentUser)
                 return;
             
@@ -158,15 +154,15 @@ namespace aice_stable
             var users = channel.Users;
             if (guildMusicData.IsPlaying && !users.Any(x => !x.IsBot))
             {
-                await guildMusicData.PauseAsync();
-                await guildMusicData.SaveAsync();
+                await guildMusicData.SkipOrStopAsync();
 
                 if (guildMusicData.CommandChannel != null)
                 {
                     await guildMusicData.CommandChannel.SendMessageAsync
-                        ($"{DiscordEmoji.FromName(client, ":play_pause:")} All users left the channel. Pausing playback. To resume, rejoin the channel and use the command 'resume'.");
+                        ($"{DiscordEmoji.FromName(client, ":play_pause:")} All users left the channel. Stopping playback.");
                 }
             }
+
             if (voiceState.After.Channel != null) {
                 Console.WriteLine($"voice state {voiceState.After?.Channel}");
             }
@@ -174,14 +170,6 @@ namespace aice_stable
             /// once the channel is empty.
             /// More testing required.
             /// Thanks, poor documentation :)
-            if (voiceState.After.Channel == null && voiceState.User == this.discord.CurrentUser)
-                {
-                    await guildMusicData.CommandChannel.SendMessageAsync("Destroying Music Channel...");
-                    await guildMusicData.StopAsync();
-                    await guildMusicData.DestroyPlayerAsync();
-                    return;
-                }
-            
         }
     }
 }

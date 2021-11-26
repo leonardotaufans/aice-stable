@@ -3,10 +3,14 @@
 		<OutputType>Exe</OutputType>
 		<TargetFramework>netcoreapp3.1</TargetFramework>
 		<RootNamespace>aice_stable</RootNamespace>
-		<TargetIdentifier>win10-x64,linux-x64</TargetIdentifier>
+		<TargetIdentifier>win10-x64,win11-x64,linux-x64</TargetIdentifier>
 		<PublishSingleFile>true</PublishSingleFile>
 		<RuntimeIdentifier>linux-x64</RuntimeIdentifier>
     	<SelfContained>true</SelfContained>
+		<Version>1.4.0</Version>
+
+		<Authors>leonardotaufans</Authors>
+		<Company>NoliveID</Company>
 	</PropertyGroup>
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
 		<DefineConstants>TRACE</DefineConstants>

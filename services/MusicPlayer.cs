@@ -1,6 +1,7 @@
 ﻿using aice_stable.models;
 using aice_stable.Models;
 using aice_stable.Services;
+using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.Lavalink;
 using DSharpPlus.Lavalink.EventArgs;
@@ -13,7 +14,7 @@ using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-
+using aice_stable.commands;
 namespace aice_stable.services
 {
     /// <summary>
@@ -69,6 +70,10 @@ namespace aice_stable.services
         private RedisClient redis { get; }
         public LavalinkService Lavalink { get; }
         private LavalinkGuildConnection Player { get; set; }
+
+        // private MusicServices _musicServices = 
+        // private MusicCommandModule CommandModule = new MusicCommandModule();
+        private DiscordMessage NewNowPlaying {get; set; }
         ///private RedisClient Redis { get; }
         ///
         /// <summary>
@@ -134,7 +139,7 @@ namespace aice_stable.services
             }
         }
 
-        public async Task PlayAsync()
+        public async Task PlayAsync(DSharpPlus.CommandsNext.CommandContext ctx)
         {
             if (Player == null || !Player.IsConnected)
                 return;
@@ -146,7 +151,7 @@ namespace aice_stable.services
         /// <summary>
         /// Stops the playback.
         /// </summary>
-        public async Task StopAsync()
+        public async Task SkipOrStopAsync()
         {
             if (this.Player == null || !this.Player.IsConnected)
                 return;
@@ -391,6 +396,7 @@ namespace aice_stable.services
             this.Player = await this.Lavalink.LavalinkNode.ConnectAsync(channel);
             if (this.Volume != 100)
                 await this.Player.SetVolumeAsync(this.Volume);
+            
             this.Player.PlaybackFinished += this.Player_PlaybackFinished;
         }
 
@@ -430,6 +436,7 @@ namespace aice_stable.services
 
         private async Task PlayHandlerAsync()
         {
+
             var itemN = this.Dequeue();
             if (itemN == null)
             {
@@ -442,5 +449,7 @@ namespace aice_stable.services
             this.IsPlaying = true;
             await this.Player.PlayAsync(item.Track);
         }
+
+        
     }
 }

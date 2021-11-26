@@ -1,4 +1,4 @@
-2021-10-09 21:35:05.579  INFO 56910 --- [main] lavalink.server.Launcher                 : 
+2021-11-26 07:22:58.550  INFO 15424 --- [main] lavalink.server.Launcher                 : 
 
 [32m       .  [31m _                  _ _       _    [32m__ _ _
 [32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
@@ -13,248 +13,463 @@
 	Branch          master
 	Commit:         7b914f2
 	Commit time:    09.04.2021 17:14:27 UTC
-	JVM:            17
+	JVM:            11.0.13
 	Lavaplayer      1.3.76
 
-2021-10-09 21:35:05.755  INFO 56910 --- [main] o.s.boot.SpringApplication               : 
+2021-11-26 07:22:58.771  INFO 15424 --- [main] o.s.boot.SpringApplication               : 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
 ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
-[32m :: Spring Boot :: [39m      [2m (v2.1.8.RELEASE)[0;39m
+ :: Spring Boot ::        (v2.1.8.RELEASE)
 
 
-2021-10-09 21:35:05.938  INFO 56910 --- [main] lavalink.server.Launcher                 : Starting Launcher on leonardots with PID 56910 (/media/leonardots/SSD Storage1/aice-stable/Lavalink.jar started by leonardots in /media/leonardots/SSD Storage1/aice-stable)
-2021-10-09 21:35:05.942  INFO 56910 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
-2021-10-09 21:35:06.021  WARN 56910 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2021-10-09 21:35:07.617  WARN 56910 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2021-10-09 21:35:07.662  INFO 56910 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2021-10-09 21:35:07.662  INFO 56910 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1636 ms
-2021-10-09 21:35:08.093  WARN 56910 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
-2021-10-09 21:35:08.520  INFO 56910 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2021-10-09 21:35:08.774  INFO 56910 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
-2021-10-09 21:35:08.775  INFO 56910 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
-2021-10-09 21:35:08.782  INFO 56910 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
-2021-10-09 21:35:08.793  INFO 56910 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
-2021-10-09 21:35:09.145  INFO 56910 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-10-09 21:35:09.523  INFO 56910 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
-2021-10-09 21:35:09.542  INFO 56910 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
-2021-10-09 21:35:09.618  INFO 56910 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
-2021-10-09 21:35:09.624  INFO 56910 --- [main] lavalink.server.Launcher                 : Started Launcher in 4.811 seconds (JVM running for 5.833)
-2021-10-09 21:35:09.626  INFO 56910 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/Frederikam/Lavalink/issues/295
-2021-10-09 21:36:43.754  INFO 56910 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-09 21:36:43.757  INFO 56910 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-09 21:36:43.778  INFO 56910 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
-2021-10-09 21:36:43.837 ERROR 56910 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Authentication failed from /127.0.0.1:56512
-2021-10-09 21:37:09.939  INFO 56910 --- [XNIO-1 task-2] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56522
-2021-10-09 21:37:10.014  INFO 56910 --- [XNIO-1 task-2] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:56522
-2021-10-09 21:37:41.191  INFO 56910 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dCkjh-Ppufo"
-2021-10-09 21:37:42.676  INFO 56910 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Kayzo - Before The Storm (SYN Remix)
-2021-10-09 21:37:43.235  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"693e7cc0b19fe408b3acbbaca7c27afa","event":{"token":"ec22c857067fac2b","guild_id":"543720471292674048","endpoint":"sydney8176.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
-2021-10-09 21:37:43.339  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAhgIAJEtheXpvIC0gQmVmb3JlIFRoZSBTdG9ybSAoU1lOIFJlbWl4KQAIQ0VSRU5USU0AAAAAAAR0oAALZENramgtUHB1Zm8AAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kQ2tqaC1QcHVmbwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
-2021-10-09 21:37:53.390  WARN 56910 --- [nioEventLoopGroup-2-5] lavalink.server.player.EventEmitter      : Kayzo - Before The Storm (SYN Remix) got stuck! Threshold surpassed: 10000
-2021-10-09 21:37:56.259  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
-2021-10-09 21:38:27.567  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"pause":false,"op":"pause","guildId":"543720471292674048"}
-2021-10-09 21:44:58.677  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:56522 -- CloseStatus[code=1006, reason=]
-2021-10-09 21:44:58.678  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 21:45:37.222  INFO 56910 --- [XNIO-1 task-5] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56698
-2021-10-09 21:45:37.229  INFO 56910 --- [XNIO-1 task-5] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:56698
-2021-10-09 21:46:34.019  INFO 56910 --- [XNIO-1 task-6] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/onPBDl9kASc"
-2021-10-09 21:46:34.891  INFO 56910 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track 【Fubuki Comfy BGM】24 Hour of Sawayakana Shirakami Fubuzilla【Animated】
-2021-10-09 21:46:35.394  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"53385a3a274f2d9bd96cf8de14d8fd51","event":{"token":"ec22c857067fac2b","guild_id":"543720471292674048","endpoint":"sydney8176.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
-2021-10-09 21:46:35.409  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAtAIATeOAkEZ1YnVraSBDb21meSBCR03jgJEyNCBIb3VyIG9mIFNhd2F5YWthbmEgU2hpcmFrYW1pIEZ1YnV6aWxsYeOAkEFuaW1hdGVk44CRAA1GYW5mYXJlIENo44CCAAAAAAUmhvgAC29uUEJEbDlrQVNjAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9b25QQkRsOWtBU2MAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"543720471292674048"}
-2021-10-09 21:46:52.246  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
-2021-10-09 21:46:52.623  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
-2021-10-09 21:46:52.628  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"543720471292674048"}
-2021-10-09 21:49:37.890  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:56698 -- CloseStatus[code=1006, reason=]
-2021-10-09 21:49:37.891  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 21:49:43.904  INFO 56910 --- [XNIO-1 task-8] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:56766
-2021-10-09 21:49:43.909  INFO 56910 --- [XNIO-1 task-8] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:56766
-2021-10-09 21:50:21.571  INFO 56910 --- [XNIO-1 task-9] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/AmJOiMBL65E"
-2021-10-09 21:50:21.913  INFO 56910 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track 【1Hour 耐久BGM】2:23 AM Uruha Rushia のんびり聴き
-2021-10-09 21:50:22.416  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"46dfc0a846af6c8af2c32f4e6f22e417","event":{"token":"b0f91a5099a59734","guild_id":"543720471292674048","endpoint":"sydney9225.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
-2021-10-09 21:50:22.429  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAsgIAPOOAkDFIb3VyIOiAkOS5hUJHTeOAkTI6MjMgQU0gVXJ1aGEgUnVzaGlhIOOBruOCk+OBs+OCiuiBtOOBjQAcQmVzdEZyZWVNdXNpY+ODleODquODvOmfs+alvQAAAAAAOquIAAtBbUpPaU1CTDY1RQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PUFtSk9pTUJMNjVFAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"543720471292674048"}
-2021-10-09 21:50:29.296  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
-2021-10-09 21:50:29.675  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
-2021-10-09 21:50:29.691  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"543720471292674048"}
-2021-10-09 21:51:54.308  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:56766 -- CloseStatus[code=1006, reason=]
-2021-10-09 21:51:54.311  INFO 56910 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 21:51:55.292  INFO 56910 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-10-09 21:51:55.294  INFO 56910 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
-2021-10-09 21:51:55.314  INFO 56910 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2021-10-09 22:17:53.584  INFO 60436 --- [main] lavalink.server.Launcher                 : 
+2021-11-26 07:22:59.072  INFO 15424 --- [main] lavalink.server.Launcher                 : Starting Launcher on Leonardo-PC with PID 15424 (D:\aice-stable\Lavalink.jar started by leonardotaufans in D:\aice-stable)
+2021-11-26 07:22:59.080  INFO 15424 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
+2021-11-26 07:22:59.343  WARN 15424 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-11-26 07:23:01.977  WARN 15424 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2021-11-26 07:23:02.027  INFO 15424 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2021-11-26 07:23:02.028  INFO 15424 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2762 ms
+2021-11-26 07:23:02.723  WARN 15424 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
+2021-11-26 07:23:03.521  INFO 15424 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
+2021-11-26 07:23:04.087  INFO 15424 --- [main] lavalink.server.config.KoeConfiguration  : OS: Windows 10, Arch: amd64
+2021-11-26 07:23:04.088  WARN 15424 --- [main] lavalink.server.config.KoeConfiguration  : This system and architecture appears to not support native audio sending! GC pauses may cause your bot to stutter during playback.
+2021-11-26 07:23:04.860  INFO 15424 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-11-26 07:23:05.704  INFO 15424 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
+2021-11-26 07:23:05.737  INFO 15424 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2021-11-26 07:23:05.845  INFO 15424 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
+2021-11-26 07:23:05.858  INFO 15424 --- [main] lavalink.server.Launcher                 : Started Launcher in 8.552 seconds (JVM running for 9.638)
+2021-11-26 07:23:05.860  INFO 15424 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/Frederikam/Lavalink/issues/295
+2021-11-26 07:25:07.929  INFO 15424 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-26 07:25:07.931  INFO 15424 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-11-26 07:25:07.952  INFO 15424 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2021-11-26 07:25:08.047  INFO 15424 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:64634
+2021-11-26 07:25:08.462  INFO 15424 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:64634
+2021-11-26 07:25:41.273  INFO 15424 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/niJdV4QUFaU"
+2021-11-26 07:25:42.788  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Figu@Mate Opening Full  Gacha Gacha Cute
+2021-11-26 07:25:43.374  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"2160222f9cda14b8789ad2827cb4eb68","event":{"token":"9a126327cfc7eba5","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 07:25:44.900  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAhwIAKEZpZ3VATWF0ZSBPcGVuaW5nIEZ1bGwgIEdhY2hhIEdhY2hhIEN1dGUABVJlaW5hAAAAAAADikAAC25pSmRWNFFVRmFVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9bmlKZFY0UVVGYVUAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"543720471292674048"}
+2021-11-26 07:25:49.453 ERROR 15424 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.t.p.LocalAudioTrackExecutor      : Error in playback of niJdV4QUFaU
 
-[32m       .  [31m _                  _ _       _    [32m__ _ _
-[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
-[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
-[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
-[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
-[0m    =========================================[32m/_/_/_/[0m
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something broke when playing the track.
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:44) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:116) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$executeTrack$1(DefaultAudioPlayerManager.java:348) ~[lavaplayer-1.3.76.jar!/:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.76
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Eclipse Adoptium
+  java.version: 11.0.13
+  java.runtime.version: 11.0.13+8
+  java.vm.version: 11.0.13+8
+Caused by: java.lang.RuntimeException: Not success status code: 403
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.validateStatusCode(PersistentHttpStream.java:87) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:116) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.internalRead(PersistentHttpStream.java:150) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.read(PersistentHttpStream.java:166) ~[lavaplayer-1.3.76.jar!/:na]
+	at java.base/java.io.DataInputStream.readByte(DataInputStream.java:270) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaEbmlReader.readEbmlInteger(MatroskaEbmlReader.java:39) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaFileReader.readNextElement(MatroskaFileReader.java:45) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.readFile(MatroskaStreamingFile.java:78) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.loadMatroskaFile(MatroskaAudioTrack.java:51) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.process(MatroskaAudioTrack.java:34) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.DelegatedAudioTrack.processDelegate(DelegatedAudioTrack.java:25) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.processStatic(YoutubeAudioTrack.java:57) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.process(YoutubeAudioTrack.java:49) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:104) ~[lavaplayer-1.3.76.jar!/:na]
+	... 4 common frames omitted
 
-	Version:        3.3.2.5
-	Build:          1222
-	Build time:     11.04.2021 08:07:27 UTC
-	Branch          master
-	Commit:         7b914f2
-	Commit time:    09.04.2021 17:14:27 UTC
-	JVM:            17
-	Lavaplayer      1.3.76
+2021-11-26 07:26:17.108  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 07:26:17.121  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"543720471292674048"}
+2021-11-26 07:31:18.116  INFO 15424 --- [XNIO-1 task-4] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/3UxmC7DbZ78"
+2021-11-26 07:31:18.576  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Gacha Gacha CUTE Figu@Mate - Fubuki and Patra
+2021-11-26 07:31:19.668  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"2160222f9cda14b8789ad2827cb4eb68","event":{"token":"1e5798f4dbf4e9e7","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 07:31:19.698  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAlAIALUdhY2hhIEdhY2hhIENVVEUgRmlndUBNYXRlIC0gRnVidWtpIGFuZCBQYXRyYQANRmFuZmFyZSBDaOOAggAAAAAAA36IAAszVXhtQzdEYlo3OAABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PTNVeG1DN0RiWjc4AAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"543720471292674048"}
+2021-11-26 07:31:57.704  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 07:32:12.860  INFO 15424 --- [XNIO-1 task-6] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/5-aazdelI5c"
+2021-11-26 07:32:13.191  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Sword Art Online  Alicization Opening Full?LiSA   ADAMAS??ENG Sub?
+2021-11-26 07:32:13.266  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAqgIASlN3b3JkIEFydCBPbmxpbmUgIEFsaWNpemF0aW9uIE9wZW5pbmcgRnVsbOOAjkxpU0EgICBBREFNQVPjgI/jgJBFTkcgU3Vi44CRAAZLSUxMRVIAAAAAAANnGAALNS1hYXpkZWxJNWMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01LWFhemRlbEk1YwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 07:34:38.863  INFO 15424 --- [XNIO-1 task-8] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/niJdV4QUFaU"
+2021-11-26 07:34:39.334  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Figu@Mate Opening Full  Gacha Gacha Cute
+2021-11-26 07:35:57.528  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAhwIAKEZpZ3VATWF0ZSBPcGVuaW5nIEZ1bGwgIEdhY2hhIEdhY2hhIEN1dGUABVJlaW5hAAAAAAADikAAC25pSmRWNFFVRmFVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9bmlKZFY0UVVGYVUAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"543720471292674048"}
+2021-11-26 07:45:17.459  INFO 15424 --- [XNIO-1 task-10] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/5-aazdelI5c"
+2021-11-26 07:45:17.911  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Sword Art Online  Alicization Opening Full?LiSA   ADAMAS??ENG Sub?
+2021-11-26 07:45:17.940  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAqgIASlN3b3JkIEFydCBPbmxpbmUgIEFsaWNpemF0aW9uIE9wZW5pbmcgRnVsbOOAjkxpU0EgICBBREFNQVPjgI/jgJBFTkcgU3Vi44CRAAZLSUxMRVIAAAAAAANnGAALNS1hYXpkZWxJNWMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01LWFhemRlbEk1YwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 07:45:28.422  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"pause":false,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:45:43.620  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:46:34.233  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"pause":false,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:46:45.092  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:48:28.700  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"pause":false,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:48:44.839  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:48:52.054  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:64634 -- CloseStatus[code=1006, reason=]
+2021-11-26 07:48:52.055  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 07:49:07.781  INFO 15424 --- [XNIO-1 task-12] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:50658
+2021-11-26 07:49:07.787  INFO 15424 --- [XNIO-1 task-12] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:50658
+2021-11-26 07:49:20.689  INFO 15424 --- [XNIO-1 task-13] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/5-aazdelI5c"
+2021-11-26 07:49:21.092  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Sword Art Online  Alicization Opening Full?LiSA   ADAMAS??ENG Sub?
+2021-11-26 07:49:21.609  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"aed96ce7db063a92984459a6113cd892","event":{"token":"1e5798f4dbf4e9e7","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 07:49:21.621  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAqgIASlN3b3JkIEFydCBPbmxpbmUgIEFsaWNpemF0aW9uIE9wZW5pbmcgRnVsbOOAjkxpU0EgICBBREFNQVPjgI/jgJBFTkcgU3Vi44CRAAZLSUxMRVIAAAAAAANnGAALNS1hYXpkZWxJNWMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01LWFhemRlbEk1YwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 07:49:29.302  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:53:00.034  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:50658 -- CloseStatus[code=1006, reason=]
+2021-11-26 07:53:00.036  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 07:53:14.932  INFO 15424 --- [XNIO-1 task-15] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:50692
+2021-11-26 07:53:14.940  INFO 15424 --- [XNIO-1 task-15] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:50692
+2021-11-26 07:53:32.175  INFO 15424 --- [XNIO-1 task-16] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/5-aazdelI5c"
+2021-11-26 07:53:32.651  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Sword Art Online  Alicization Opening Full?LiSA   ADAMAS??ENG Sub?
+2021-11-26 07:53:33.777  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"d0d873b9969293410d54b4966dcea192","event":{"token":"1e5798f4dbf4e9e7","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 07:53:33.791  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAqgIASlN3b3JkIEFydCBPbmxpbmUgIEFsaWNpemF0aW9uIE9wZW5pbmcgRnVsbOOAjkxpU0EgICBBREFNQVPjgI/jgJBFTkcgU3Vi44CRAAZLSUxMRVIAAAAAAANnGAALNS1hYXpkZWxJNWMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01LWFhemRlbEk1YwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 07:53:43.110  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:53:46.899  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"pause":false,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:54:47.432  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:50692 -- CloseStatus[code=1006, reason=]
+2021-11-26 07:54:47.436  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2021-11-26 07:55:00.260  INFO 15424 --- [XNIO-1 task-18] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:50717
+2021-11-26 07:55:00.266  INFO 15424 --- [XNIO-1 task-18] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:50717
+2021-11-26 07:55:22.487  INFO 15424 --- [XNIO-1 task-19] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Gq_fCeyhHeU"
+2021-11-26 07:55:22.889  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track ?Fubuki Comfy BGM?1 Hour of Relaxing Shirakami Fubuzilla?Animated?
+2021-11-26 07:55:24.016  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"sessionId":"dc69e143694fc5e0285fab3d1834c324","event":{"token":"1e5798f4dbf4e9e7","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 07:55:24.037  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAsQIASuOAkEZ1YnVraSBDb21meSBCR03jgJExIEhvdXIgb2YgUmVsYXhpbmcgU2hpcmFrYW1pIEZ1YnV6aWxsYeOAkEFuaW1hdGVk44CRAA1GYW5mYXJlIENo44CCAAAAAAA3wXAAC0dxX2ZDZXloSGVVAAEAK2h0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9R3FfZkNleWhIZVUAB3lvdXR1YmUAAAAAAAAAAA==","op":"play","guildId":"543720471292674048"}
+2021-11-26 07:55:46.131  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:55:52.128  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"pause":false,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:56:10.371  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:56:14.023  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"pause":false,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 07:56:45.279  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 07:56:45.289  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"543720471292674048"}
+2021-11-26 08:00:39.383  INFO 15424 --- [XNIO-1 task-21] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/5-aazdelI5c"
+2021-11-26 08:00:39.811  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Sword Art Online  Alicization Opening Full?LiSA   ADAMAS??ENG Sub?
+2021-11-26 08:00:40.917  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"sessionId":"dc69e143694fc5e0285fab3d1834c324","event":{"token":"59dfdce3068f4f61","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 08:00:40.925  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAqgIASlN3b3JkIEFydCBPbmxpbmUgIEFsaWNpemF0aW9uIE9wZW5pbmcgRnVsbOOAjkxpU0EgICBBREFNQVPjgI/jgJBFTkcgU3Vi44CRAAZLSUxMRVIAAAAAAANnGAALNS1hYXpkZWxJNWMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01LWFhemRlbEk1YwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 08:00:54.441  INFO 15424 --- [XNIO-1 task-23] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 08:00:54.960  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 08:01:13.339  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 08:01:13.859  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAPFJpY2sgQXN0bGV5IC0gTmV2ZXIgR29ubmEgR2l2ZSBZb3UgVXAgKE9mZmljaWFsIE11c2ljIFZpZGVvKQALUmljayBBc3RsZXkAAAAAAAM8IAALZFF3NHc5V2dYY1EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 08:01:14.751 ERROR 15424 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.t.p.LocalAudioTrackExecutor      : Error in playback of dQw4w9WgXcQ
 
-2021-10-09 22:17:53.669  INFO 60436 --- [main] o.s.boot.SpringApplication               : 
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
-[32m :: Spring Boot :: [39m      [2m (v2.1.8.RELEASE)[0;39m
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something broke when playing the track.
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:44) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:116) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$executeTrack$1(DefaultAudioPlayerManager.java:348) ~[lavaplayer-1.3.76.jar!/:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.76
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Eclipse Adoptium
+  java.version: 11.0.13
+  java.runtime.version: 11.0.13+8
+  java.vm.version: 11.0.13+8
+Caused by: java.lang.RuntimeException: Not success status code: 403
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.validateStatusCode(PersistentHttpStream.java:87) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:116) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.internalRead(PersistentHttpStream.java:150) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.read(PersistentHttpStream.java:166) ~[lavaplayer-1.3.76.jar!/:na]
+	at java.base/java.io.DataInputStream.readByte(DataInputStream.java:270) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaEbmlReader.readEbmlInteger(MatroskaEbmlReader.java:39) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaFileReader.readNextElement(MatroskaFileReader.java:45) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.readFile(MatroskaStreamingFile.java:78) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.loadMatroskaFile(MatroskaAudioTrack.java:51) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.process(MatroskaAudioTrack.java:34) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.DelegatedAudioTrack.processDelegate(DelegatedAudioTrack.java:25) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.processStatic(YoutubeAudioTrack.java:57) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.process(YoutubeAudioTrack.java:49) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:104) ~[lavaplayer-1.3.76.jar!/:na]
+	... 4 common frames omitted
 
+2021-11-26 08:04:01.406  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:50717 -- CloseStatus[code=1006, reason=]
+2021-11-26 08:04:01.409  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 08:06:14.910  INFO 15424 --- [XNIO-1 task-25] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:50779
+2021-11-26 08:06:14.918  INFO 15424 --- [XNIO-1 task-25] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:50779
+2021-11-26 08:06:39.483  INFO 15424 --- [XNIO-1 task-26] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/5-aazdelI5c"
+2021-11-26 08:06:39.896  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Sword Art Online  Alicization Opening Full?LiSA   ADAMAS??ENG Sub?
+2021-11-26 08:06:40.398  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"32f72e849a8cd1b0dab2ff79607238fb","event":{"token":"2e548a73d425ee6f","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 08:06:40.413  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAqgIASlN3b3JkIEFydCBPbmxpbmUgIEFsaWNpemF0aW9uIE9wZW5pbmcgRnVsbOOAjkxpU0EgICBBREFNQVPjgI/jgJBFTkcgU3Vi44CRAAZLSUxMRVIAAAAAAANnGAALNS1hYXpkZWxJNWMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01LWFhemRlbEk1YwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 08:06:45.331  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 08:08:11.964  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:50779 -- CloseStatus[code=1006, reason=]
+2021-11-26 08:08:11.965  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 08:08:25.471  INFO 15424 --- [XNIO-1 task-28] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:50800
+2021-11-26 08:08:25.483  INFO 15424 --- [XNIO-1 task-28] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:50800
+2021-11-26 08:13:48.524  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:50800 -- CloseStatus[code=1006, reason=]
+2021-11-26 08:13:48.526  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 08:13:57.696  INFO 15424 --- [XNIO-1 task-29] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:55408
+2021-11-26 08:13:57.701  INFO 15424 --- [XNIO-1 task-29] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:55408
+2021-11-26 08:16:19.034  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:55408 -- CloseStatus[code=1006, reason=]
+2021-11-26 08:16:19.036  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 08:16:32.582  INFO 15424 --- [XNIO-1 task-30] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:52035
+2021-11-26 08:16:32.589  INFO 15424 --- [XNIO-1 task-30] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:52035
+2021-11-26 08:16:36.740  INFO 15424 --- [XNIO-1 task-31] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 08:16:37.143  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 08:16:38.280  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"4a5bd72611c0c24596433f2d7764ea2e","event":{"token":"a98cb34486289661","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 08:16:38.293  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 08:16:38.763  INFO 15424 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 08:16:39.439  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 08:16:39.801  INFO 15424 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 08:16:40.240  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 08:16:55.190  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 08:16:55.706  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAPFJpY2sgQXN0bGV5IC0gTmV2ZXIgR29ubmEgR2l2ZSBZb3UgVXAgKE9mZmljaWFsIE11c2ljIFZpZGVvKQALUmljayBBc3RsZXkAAAAAAAM8IAALZFF3NHc5V2dYY1EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 08:20:29.472  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAlAIAL0JlZSBHZWVzIC0gU3RheWluJyBBbGl2ZSAoT2ZmaWNpYWwgTXVzaWMgVmlkZW8pAAtCZWVHZWVzVkVWTwAAAAAAA9CQAAtmTkZ6ZndMTTcyYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWZORnpmd0xNNzJjAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"543720471292674048"}
+2021-11-26 08:27:42.576  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:52035 -- CloseStatus[code=1006, reason=]
+2021-11-26 08:27:42.579  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 08:27:57.322  INFO 15424 --- [XNIO-1 task-5] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:56969
+2021-11-26 08:27:57.328  INFO 15424 --- [XNIO-1 task-5] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:56969
+2021-11-26 08:29:09.759  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:56969 -- CloseStatus[code=1006, reason=]
+2021-11-26 08:29:09.759  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 08:29:19.069  INFO 15424 --- [XNIO-1 task-6] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:56982
+2021-11-26 08:29:19.083  INFO 15424 --- [XNIO-1 task-6] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:56982
+2021-11-26 08:30:00.014  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:56982 -- CloseStatus[code=1006, reason=]
+2021-11-26 08:30:00.026  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 08:30:18.291  INFO 15424 --- [XNIO-1 task-7] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:56994
+2021-11-26 08:30:18.299  INFO 15424 --- [XNIO-1 task-7] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:56994
+2021-11-26 08:36:01.267  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:56994 -- CloseStatus[code=1006, reason=]
+2021-11-26 08:36:01.267  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 08:36:13.149  INFO 15424 --- [XNIO-1 task-8] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:57031
+2021-11-26 08:36:13.187  INFO 15424 --- [XNIO-1 task-8] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:57031
+2021-11-26 08:36:19.147  INFO 15424 --- [XNIO-1 task-9] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 08:36:19.549  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 08:36:20.654  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"a2a4af2608ff682762e73799077f2663","event":{"token":"51743b58ac15ce68","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 08:36:20.663  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 08:36:21.298  INFO 15424 --- [XNIO-1 task-11] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 08:36:21.887  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 08:36:22.218  INFO 15424 --- [XNIO-1 task-13] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 08:36:22.739  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 08:50:59.876  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:57031 -- CloseStatus[code=1006, reason=]
+2021-11-26 08:50:59.878  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2021-11-26 08:55:36.686  INFO 15424 --- [XNIO-1 task-15] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:52235
+2021-11-26 08:55:36.704  INFO 15424 --- [XNIO-1 task-15] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:52235
+2021-11-26 08:55:38.980  INFO 15424 --- [XNIO-1 task-16] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 08:55:39.430  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 08:55:40.535  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"b433ebade491c44f20fa5924088c4a42","event":{"token":"4971fc9df3d90ae1","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 08:55:40.544  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 08:55:41.034  INFO 15424 --- [XNIO-1 task-18] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 08:55:41.679  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 08:55:42.035  INFO 15424 --- [XNIO-1 task-20] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 08:55:42.565  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 08:56:02.167  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 08:56:35.335  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:52235 -- CloseStatus[code=1006, reason=]
+2021-11-26 08:56:35.336  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 08:56:53.067  INFO 15424 --- [XNIO-1 task-22] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:52253
+2021-11-26 08:56:53.086  INFO 15424 --- [XNIO-1 task-22] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:52253
+2021-11-26 08:56:53.601  INFO 15424 --- [XNIO-1 task-23] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 08:56:54.496  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 08:56:55.664  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"sessionId":"e14d4dbac18829989cd12d2afa32f41c","event":{"token":"4971fc9df3d90ae1","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 08:56:55.675  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 08:56:56.123  INFO 15424 --- [XNIO-1 task-25] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 08:56:56.741  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 08:56:57.096  INFO 15424 --- [XNIO-1 task-27] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 08:56:57.594  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 08:57:08.469  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"pause":false,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 08:57:14.272  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 08:57:40.663  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:52253 -- CloseStatus[code=1006, reason=]
+2021-11-26 08:57:40.688  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 08:57:53.341  INFO 15424 --- [XNIO-1 task-29] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:52267
+2021-11-26 08:57:53.367  INFO 15424 --- [XNIO-1 task-29] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:52267
+2021-11-26 08:58:00.913  INFO 15424 --- [XNIO-1 task-30] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 08:58:01.444  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 08:58:02.568  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"d967c80512e27e914589c36f72f2d767","event":{"token":"4971fc9df3d90ae1","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 08:58:02.577  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 08:58:02.997  INFO 15424 --- [XNIO-1 task-32] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 08:58:03.549  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 08:58:04.008  INFO 15424 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 08:58:04.498  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 08:58:11.425  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 08:58:15.236  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"pause":false,"op":"pause","guildId":"543720471292674048"}
+2021-11-26 08:58:22.070  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 08:58:22.593  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAPFJpY2sgQXN0bGV5IC0gTmV2ZXIgR29ubmEgR2l2ZSBZb3UgVXAgKE9mZmljaWFsIE11c2ljIFZpZGVvKQALUmljayBBc3RsZXkAAAAAAAM8IAALZFF3NHc5V2dYY1EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:01:56.570  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAlAIAL0JlZSBHZWVzIC0gU3RheWluJyBBbGl2ZSAoT2ZmaWNpYWwgTXVzaWMgVmlkZW8pAAtCZWVHZWVzVkVWTwAAAAAAA9CQAAtmTkZ6ZndMTTcyYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWZORnpmd0xNNzJjAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:02:03.279  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:02:03.287  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"543720471292674048"}
+2021-11-26 09:03:51.274  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:52267 -- CloseStatus[code=1006, reason=]
+2021-11-26 09:03:51.274  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 09:04:05.733  INFO 15424 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:52308
+2021-11-26 09:04:05.751  INFO 15424 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:52308
+2021-11-26 09:04:08.166  INFO 15424 --- [XNIO-1 task-5] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 09:04:08.503  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 09:04:09.637  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"9e187e75b90816b01e6580b028c03de5","event":{"token":"76a8c6cbc0672071","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 09:04:09.649  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:04:10.056  INFO 15424 --- [XNIO-1 task-7] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 09:04:10.549  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 09:04:10.891  INFO 15424 --- [XNIO-1 task-9] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 09:04:11.441  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 09:04:30.956  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:04:31.476  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAPFJpY2sgQXN0bGV5IC0gTmV2ZXIgR29ubmEgR2l2ZSBZb3UgVXAgKE9mZmljaWFsIE11c2ljIFZpZGVvKQALUmljayBBc3RsZXkAAAAAAAM8IAALZFF3NHc5V2dYY1EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:04:32.217 ERROR 15424 --- [lava-daemon-pool-playback-1-thread-1] c.s.d.l.t.p.LocalAudioTrackExecutor      : Error in playback of dQw4w9WgXcQ
 
-2021-10-09 22:17:53.827  INFO 60436 --- [main] lavalink.server.Launcher                 : Starting Launcher on leonardots with PID 60436 (/media/leonardots/SSD Storage1/aice-stable/Lavalink.jar started by leonardots in /media/leonardots/SSD Storage1/aice-stable)
-2021-10-09 22:17:53.832  INFO 60436 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
-2021-10-09 22:17:53.875  WARN 60436 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2021-10-09 22:17:55.451  WARN 60436 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2021-10-09 22:17:55.496  INFO 60436 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2021-10-09 22:17:55.497  INFO 60436 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1559 ms
-2021-10-09 22:17:55.945  WARN 60436 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
-2021-10-09 22:17:56.341  INFO 60436 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2021-10-09 22:17:56.563  INFO 60436 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
-2021-10-09 22:17:56.565  INFO 60436 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
-2021-10-09 22:17:56.573  INFO 60436 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
-2021-10-09 22:17:56.581  INFO 60436 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
-2021-10-09 22:17:56.951  INFO 60436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-10-09 22:17:57.286  INFO 60436 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
-2021-10-09 22:17:57.300  INFO 60436 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
-2021-10-09 22:17:57.376  INFO 60436 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
-2021-10-09 22:17:57.380  INFO 60436 --- [main] lavalink.server.Launcher                 : Started Launcher in 4.566 seconds (JVM running for 5.255)
-2021-10-09 22:17:57.385  INFO 60436 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/Frederikam/Lavalink/issues/295
-2021-10-09 22:18:18.633  INFO 60436 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-09 22:18:18.635  INFO 60436 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-09 22:18:18.649  INFO 60436 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2021-10-09 22:18:18.692  INFO 60436 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57290
-2021-10-09 22:18:18.771  INFO 60436 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57290
-2021-10-09 22:19:21.862  INFO 60436 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/nnZpgbJQVXw"
-2021-10-09 22:19:23.075  INFO 60436 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Virgoun feat. Audy - Selamat (Selamat Tinggal) (Official Lyric Video)  | Chapter 4/4
-2021-10-09 22:19:24.216  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"b2244fafe39a8636717633054bc9c8ad","event":{"token":"6f80d3b90362c594","guild_id":"543720471292674048","endpoint":"sydney1581.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
-2021-10-09 22:19:24.306  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAuAIAVFZpcmdvdW4gZmVhdC4gQXVkeSAtIFNlbGFtYXQgKFNlbGFtYXQgVGluZ2dhbCkgKE9mZmljaWFsIEx5cmljIFZpZGVvKSAgfCBDaGFwdGVyIDQvNAAKTEFTVCBDSElMRAAAAAAABWbQAAtublpwZ2JKUVZYdwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PW5uWnBnYkpRVlh3AAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"543720471292674048"}
-2021-10-09 22:20:12.884  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57290 -- CloseStatus[code=1006, reason=]
-2021-10-09 22:20:12.891  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
-2021-10-09 22:20:17.415  INFO 60436 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57330
-2021-10-09 22:20:17.427  INFO 60436 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57330
-2021-10-09 22:20:51.258  INFO 60436 --- [XNIO-1 task-5] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/nnZpgbJQVXw"
-2021-10-09 22:20:51.775  INFO 60436 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Virgoun feat. Audy - Selamat (Selamat Tinggal) (Official Lyric Video)  | Chapter 4/4
-2021-10-09 22:20:52.879  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"d124a7cc286f4dae5108853d01e54c9a","event":{"token":"6f80d3b90362c594","guild_id":"543720471292674048","endpoint":"sydney1581.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
-2021-10-09 22:20:52.890  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAuAIAVFZpcmdvdW4gZmVhdC4gQXVkeSAtIFNlbGFtYXQgKFNlbGFtYXQgVGluZ2dhbCkgKE9mZmljaWFsIEx5cmljIFZpZGVvKSAgfCBDaGFwdGVyIDQvNAAKTEFTVCBDSElMRAAAAAAABWbQAAtublpwZ2JKUVZYdwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PW5uWnBnYkpRVlh3AAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"543720471292674048"}
-2021-10-09 22:21:25.618  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57330 -- CloseStatus[code=1006, reason=]
-2021-10-09 22:21:25.619  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
-2021-10-09 22:21:30.038  INFO 60436 --- [XNIO-1 task-7] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57352
-2021-10-09 22:21:30.044  INFO 60436 --- [XNIO-1 task-7] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57352
-2021-10-09 22:22:10.393  INFO 60436 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57352 -- CloseStatus[code=1006, reason=]
-2021-10-09 22:22:10.394  INFO 60436 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 22:22:15.043  INFO 60436 --- [XNIO-1 task-8] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57380
-2021-10-09 22:22:15.056  INFO 60436 --- [XNIO-1 task-8] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57380
-2021-10-09 22:23:44.745  INFO 60436 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57380 -- CloseStatus[code=1006, reason=]
-2021-10-09 22:23:44.746  INFO 60436 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 22:23:49.357  INFO 60436 --- [XNIO-1 task-9] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57406
-2021-10-09 22:23:49.367  INFO 60436 --- [XNIO-1 task-9] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57406
-2021-10-09 22:24:18.648  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57406 -- CloseStatus[code=1006, reason=]
-2021-10-09 22:24:18.649  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 22:24:22.605  INFO 60436 --- [XNIO-1 task-10] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57424
-2021-10-09 22:24:22.620  INFO 60436 --- [XNIO-1 task-10] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57424
-2021-10-09 22:32:15.796  INFO 60436 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57424 -- CloseStatus[code=1006, reason=]
-2021-10-09 22:32:15.797  INFO 60436 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 22:32:20.465  INFO 60436 --- [XNIO-1 task-11] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57532
-2021-10-09 22:32:20.477  INFO 60436 --- [XNIO-1 task-11] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57532
-2021-10-09 22:33:14.314  INFO 60436 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57532 -- CloseStatus[code=1006, reason=]
-2021-10-09 22:33:14.315  INFO 60436 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 22:33:21.648  INFO 60436 --- [XNIO-1 task-12] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57560
-2021-10-09 22:33:21.654  INFO 60436 --- [XNIO-1 task-12] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57560
-2021-10-09 22:33:40.772  INFO 60436 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57560 -- CloseStatus[code=1006, reason=]
-2021-10-09 22:33:40.776  INFO 60436 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 22:33:44.728  INFO 60436 --- [XNIO-1 task-13] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57576
-2021-10-09 22:33:44.736  INFO 60436 --- [XNIO-1 task-13] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57576
-2021-10-09 22:40:29.599  INFO 60436 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57576 -- CloseStatus[code=1006, reason=]
-2021-10-09 22:40:29.600  INFO 60436 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 22:40:35.660  INFO 60436 --- [XNIO-1 task-14] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57666
-2021-10-09 22:40:35.667  INFO 60436 --- [XNIO-1 task-14] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57666
-2021-10-09 22:40:49.081  INFO 60436 --- [XNIO-1 task-15] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Yb-rLsCpBvI"
-2021-10-09 22:40:49.754  INFO 60436 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track 【30分耐久BGM】2:23 AM / しゃろう【公式】
-2021-10-09 22:40:50.858  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"8e5df8e4019442decba74792d42b4c01","event":{"token":"afedf7bd145f9168","guild_id":"543720471292674048","endpoint":"sydney1581.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
-2021-10-09 22:40:50.870  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAowIANuOAkDMw5YiG6ICQ5LmFQkdN44CRMjoyMyBBTSAvIOOBl+OCg+OCjeOBhuOAkOWFrOW8j+OAkQAT44GX44KD44KN44GGIFNoYXJvdQAAAAAAHVugAAtZYi1yTHNDcEJ2SQABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PVliLXJMc0NwQnZJAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"543720471292674048"}
-2021-10-09 22:41:03.270  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
-2021-10-09 22:41:45.323  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57666 -- CloseStatus[code=1006, reason=]
-2021-10-09 22:41:45.325  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 22:41:52.579  INFO 60436 --- [XNIO-1 task-17] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57702
-2021-10-09 22:41:52.590  INFO 60436 --- [XNIO-1 task-17] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57702
-2021-10-09 22:42:09.141  INFO 60436 --- [XNIO-1 task-18] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/5-aazdelI5c"
-2021-10-09 22:42:09.479  INFO 60436 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Sword Art Online  Alicization Opening Full『LiSA   ADAMAS』【ENG Sub】
-2021-10-09 22:42:09.990  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"95115c92cf9f7d4d4d799875e542a96b","event":{"token":"afedf7bd145f9168","guild_id":"543720471292674048","endpoint":"sydney1581.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
-2021-10-09 22:42:10.005  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAqgIASlN3b3JkIEFydCBPbmxpbmUgIEFsaWNpemF0aW9uIE9wZW5pbmcgRnVsbOOAjkxpU0EgICBBREFNQVPjgI/jgJBFTkcgU3Vi44CRAAZLSUxMRVIAAAAAAANnGAALNS1hYXpkZWxJNWMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01LWFhemRlbEk1YwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
-2021-10-09 22:42:18.092  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
-2021-10-09 22:42:51.992  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57702 -- CloseStatus[code=1006, reason=]
-2021-10-09 22:42:51.992  INFO 60436 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 22:44:39.042  INFO 60436 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-10-09 22:44:39.046  INFO 60436 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
-2021-10-09 22:44:39.050  INFO 60436 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
-2021-10-09 22:45:31.368  INFO 63645 --- [main] lavalink.server.Launcher                 : 
+com.sedmelluq.discord.lavaplayer.tools.FriendlyException: Something broke when playing the track.
+	at com.sedmelluq.discord.lavaplayer.tools.ExceptionTools.wrapUnfriendlyExceptions(ExceptionTools.java:44) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:116) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.player.DefaultAudioPlayerManager.lambda$executeTrack$1(DefaultAudioPlayerManager.java:348) ~[lavaplayer-1.3.76.jar!/:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:829) ~[na:na]
+	Suppressed: com.sedmelluq.discord.lavaplayer.tools.exception.EnvironmentInformation: 
+  lavaplayer.version: 1.3.76
+  os.arch: amd64
+  os.name: Windows 10
+  os.version: 10.0
+  java.vendor: Eclipse Adoptium
+  java.version: 11.0.13
+  java.runtime.version: 11.0.13+8
+  java.vm.version: 11.0.13+8
+Caused by: java.lang.RuntimeException: Not success status code: 403
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.validateStatusCode(PersistentHttpStream.java:87) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.attemptConnect(PersistentHttpStream.java:116) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.connect(PersistentHttpStream.java:105) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.internalRead(PersistentHttpStream.java:150) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.tools.io.PersistentHttpStream.read(PersistentHttpStream.java:166) ~[lavaplayer-1.3.76.jar!/:na]
+	at java.base/java.io.DataInputStream.readByte(DataInputStream.java:270) ~[na:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaEbmlReader.readEbmlInteger(MatroskaEbmlReader.java:39) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.format.MatroskaFileReader.readNextElement(MatroskaFileReader.java:45) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaStreamingFile.readFile(MatroskaStreamingFile.java:78) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.loadMatroskaFile(MatroskaAudioTrack.java:51) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.container.matroska.MatroskaAudioTrack.process(MatroskaAudioTrack.java:34) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.DelegatedAudioTrack.processDelegate(DelegatedAudioTrack.java:25) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.processStatic(YoutubeAudioTrack.java:57) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.source.youtube.YoutubeAudioTrack.process(YoutubeAudioTrack.java:49) ~[lavaplayer-1.3.76.jar!/:na]
+	at com.sedmelluq.discord.lavaplayer.track.playback.LocalAudioTrackExecutor.execute(LocalAudioTrackExecutor.java:104) ~[lavaplayer-1.3.76.jar!/:na]
+	... 4 common frames omitted
 
-[32m       .  [31m _                  _ _       _    [32m__ _ _
-[32m      /\\ [31m| | __ ___   ____ _| (_)_ __ | | __[32m\ \ \ \
-[32m     ( ( )[31m| |/ _` \ \ / / _` | | | '_ \| |/ /[32m \ \ \ \
-[32m      \\/ [31m| | (_| |\ V / (_| | | | | | |   < [32m  ) ) ) )
-[32m       '  [31m|_|\__,_| \_/ \__,_|_|_|_| |_|_|\_\[32m / / / /
-[0m    =========================================[32m/_/_/_/[0m
-
-	Version:        3.3.2.5
-	Build:          1222
-	Build time:     11.04.2021 08:07:27 UTC
-	Branch          master
-	Commit:         7b914f2
-	Commit time:    09.04.2021 17:14:27 UTC
-	JVM:            17
-	Lavaplayer      1.3.76
-
-2021-10-09 22:45:31.441  INFO 63645 --- [main] o.s.boot.SpringApplication               : 
-  .   ____          _            __ _ _
- /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
- \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-  '  |____| .__|_| |_|_| |_\__, | / / / /
- =========|_|==============|___/=/_/_/_/
-[32m :: Spring Boot :: [39m      [2m (v2.1.8.RELEASE)[0;39m
-
-
-2021-10-09 22:45:31.646  INFO 63645 --- [main] lavalink.server.Launcher                 : Starting Launcher on leonardots with PID 63645 (/media/leonardots/SSD Storage1/aice-stable/Lavalink.jar started by leonardots in /media/leonardots/SSD Storage1/aice-stable)
-2021-10-09 22:45:31.649  INFO 63645 --- [main] lavalink.server.Launcher                 : No active profile set, falling back to default profiles: default
-2021-10-09 22:45:31.889  WARN 63645 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
-2021-10-09 22:45:33.650  WARN 63645 --- [main] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
-2021-10-09 22:45:33.692  INFO 63645 --- [main] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
-2021-10-09 22:45:33.693  INFO 63645 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1913 ms
-2021-10-09 22:45:34.168  WARN 63645 --- [main] l.server.config.SentryConfiguration      : Turning off sentry
-2021-10-09 22:45:34.567  INFO 63645 --- [main] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring enabled, reporting results every 2 minutes.
-2021-10-09 22:45:34.830  INFO 63645 --- [main] lavalink.server.config.KoeConfiguration  : OS: Linux, Arch: amd64
-2021-10-09 22:45:34.832  INFO 63645 --- [main] lavalink.server.config.KoeConfiguration  : Enabling JDA-NAS
-2021-10-09 22:45:34.843  INFO 63645 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: loading with filter null
-2021-10-09 22:45:34.853  INFO 63645 --- [main] c.s.l.c.natives.NativeLibraryLoader      : Native library udpqueue: successfully loaded.
-2021-10-09 22:45:35.385  INFO 63645 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-10-09 22:45:35.898  INFO 63645 --- [main] org.xnio                                 : XNIO version 3.3.8.Final
-2021-10-09 22:45:35.920  INFO 63645 --- [main] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
-2021-10-09 22:45:36.014  INFO 63645 --- [main] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 2333 (http) with context path ''
-2021-10-09 22:45:36.024  INFO 63645 --- [main] lavalink.server.Launcher                 : Started Launcher in 5.53 seconds (JVM running for 6.248)
-2021-10-09 22:45:36.030  INFO 63645 --- [main] lavalink.server.Launcher                 : You can safely ignore the big red warning about illegal reflection. See https://github.com/Frederikam/Lavalink/issues/295
-2021-10-09 22:47:39.264  INFO 63645 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-10-09 22:47:39.271  INFO 63645 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-10-09 22:47:39.319  INFO 63645 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 36 ms
-2021-10-09 22:47:39.414  INFO 63645 --- [XNIO-1 task-1] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57784
-2021-10-09 22:47:39.523  INFO 63645 --- [XNIO-1 task-1] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57784
-2021-10-09 22:47:51.527  INFO 63645 --- [XNIO-1 task-2] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/5-aazdelI5c"
-2021-10-09 22:47:52.623  INFO 63645 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Sword Art Online  Alicization Opening Full『LiSA   ADAMAS』【ENG Sub】
-2021-10-09 22:47:53.165  INFO 63645 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"63dc1730d202d19806a5e9b355edc66f","event":{"token":"ea0d24a940dd62d4","guild_id":"543720471292674048","endpoint":"sydney3367.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
-2021-10-09 22:47:53.262  INFO 63645 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAqgIASlN3b3JkIEFydCBPbmxpbmUgIEFsaWNpemF0aW9uIE9wZW5pbmcgRnVsbOOAjkxpU0EgICBBREFNQVPjgI/jgJBFTkcgU3Vi44CRAAZLSUxMRVIAAAAAAANnGAALNS1hYXpkZWxJNWMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01LWFhemRlbEk1YwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
-2021-10-09 22:47:59.428  INFO 63645 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"pause":true,"op":"pause","guildId":"543720471292674048"}
-2021-10-09 22:49:05.179  INFO 63645 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /127.0.0.1:57784 -- CloseStatus[code=1006, reason=]
-2021-10-09 22:49:05.180  INFO 63645 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
-2021-10-09 22:50:02.119  INFO 63645 --- [XNIO-1 task-4] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /127.0.0.1:57818
-2021-10-09 22:50:02.137  INFO 63645 --- [XNIO-1 task-4] lavalink.server.io.SocketServer          : Connection successfully established from /127.0.0.1:57818
+2021-11-26 09:04:33.088  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAlAIAL0JlZSBHZWVzIC0gU3RheWluJyBBbGl2ZSAoT2ZmaWNpYWwgTXVzaWMgVmlkZW8pAAtCZWVHZWVzVkVWTwAAAAAAA9CQAAtmTkZ6ZndMTTcyYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWZORnpmd0xNNzJjAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:05:08.012  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:05:08.025  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"543720471292674048"}
+2021-11-26 09:07:13.138  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:52308 -- CloseStatus[code=1006, reason=]
+2021-11-26 09:07:13.138  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 09:07:27.553  INFO 15424 --- [XNIO-1 task-11] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:52332
+2021-11-26 09:07:27.559  INFO 15424 --- [XNIO-1 task-11] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:52332
+2021-11-26 09:07:34.808  INFO 15424 --- [XNIO-1 task-12] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 09:07:35.559  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 09:07:36.073  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"15b52b2560a2bcadce00bd13350ae863","event":{"token":"f2dd0cb748196b6e","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 09:07:36.086  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:07:36.599  INFO 15424 --- [XNIO-1 task-14] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 09:07:37.797  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 09:07:38.242  INFO 15424 --- [XNIO-1 task-16] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 09:07:38.838  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 09:08:01.445  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:08:01.976  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAPFJpY2sgQXN0bGV5IC0gTmV2ZXIgR29ubmEgR2l2ZSBZb3UgVXAgKE9mZmljaWFsIE11c2ljIFZpZGVvKQALUmljayBBc3RsZXkAAAAAAAM8IAALZFF3NHc5V2dYY1EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:08:06.548  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:08:07.062  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAlAIAL0JlZSBHZWVzIC0gU3RheWluJyBBbGl2ZSAoT2ZmaWNpYWwgTXVzaWMgVmlkZW8pAAtCZWVHZWVzVkVWTwAAAAAAA9CQAAtmTkZ6ZndMTTcyYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWZORnpmd0xNNzJjAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:08:12.986  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:08:13.431  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"543720471292674048"}
+2021-11-26 09:09:51.061  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:52332 -- CloseStatus[code=1006, reason=]
+2021-11-26 09:09:51.061  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 09:10:04.883  INFO 15424 --- [XNIO-1 task-18] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:52354
+2021-11-26 09:10:04.892  INFO 15424 --- [XNIO-1 task-18] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:52354
+2021-11-26 09:10:12.583  INFO 15424 --- [XNIO-1 task-19] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 09:10:13.553  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 09:10:14.901  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"75593a656fb65d2c74204c4b6b71bc92","event":{"token":"5f1daa62df3e0608","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 09:10:14.911  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:10:15.328  INFO 15424 --- [XNIO-1 task-21] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 09:10:15.831  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 09:10:16.435  INFO 15424 --- [XNIO-1 task-23] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 09:10:16.907  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 09:10:51.323  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:10:51.845  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAPFJpY2sgQXN0bGV5IC0gTmV2ZXIgR29ubmEgR2l2ZSBZb3UgVXAgKE9mZmljaWFsIE11c2ljIFZpZGVvKQALUmljayBBc3RsZXkAAAAAAAM8IAALZFF3NHc5V2dYY1EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:10:55.040  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:10:55.563  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAlAIAL0JlZSBHZWVzIC0gU3RheWluJyBBbGl2ZSAoT2ZmaWNpYWwgTXVzaWMgVmlkZW8pAAtCZWVHZWVzVkVWTwAAAAAAA9CQAAtmTkZ6ZndMTTcyYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWZORnpmd0xNNzJjAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:10:59.653  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:11:00.067  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"543720471292674048"}
+2021-11-26 09:15:04.534  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:52354 -- CloseStatus[code=1006, reason=]
+2021-11-26 09:15:04.542  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 09:15:16.281  INFO 15424 --- [XNIO-1 task-25] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:58358
+2021-11-26 09:15:16.288  INFO 15424 --- [XNIO-1 task-25] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:58358
+2021-11-26 09:15:17.685  INFO 15424 --- [XNIO-1 task-26] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 09:15:18.089  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 09:15:19.257  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"062896bbee9b67c0515c73e73a7d6fc2","event":{"token":"540f5b7bb6a8f6ec","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 09:15:19.266  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:15:19.659  INFO 15424 --- [XNIO-1 task-28] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 09:15:20.252  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 09:15:20.615  INFO 15424 --- [XNIO-1 task-30] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 09:15:21.101  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 09:17:03.654  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:17:03.659  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"543720471292674048"}
+2021-11-26 09:17:07.467  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:58358 -- CloseStatus[code=1006, reason=]
+2021-11-26 09:17:07.468  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 09:17:19.546  INFO 15424 --- [XNIO-1 task-32] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:58379
+2021-11-26 09:17:19.552  INFO 15424 --- [XNIO-1 task-32] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:58379
+2021-11-26 09:17:25.563  INFO 15424 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 09:17:26.337  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 09:17:26.856  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"7fc7e3efc87293c4c4e3da919e06812e","event":{"token":"9bf6d06056aa6092","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 09:17:26.869  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:17:31.139  INFO 15424 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 09:17:31.773  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 09:17:36.014  INFO 15424 --- [XNIO-1 task-5] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 09:17:36.686  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 09:21:45.813  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:58379 -- CloseStatus[code=1006, reason=]
+2021-11-26 09:21:45.819  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2021-11-26 09:22:24.520  INFO 15424 --- [XNIO-1 task-7] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:54847
+2021-11-26 09:22:24.526  INFO 15424 --- [XNIO-1 task-7] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:54847
+2021-11-26 09:22:30.507  INFO 15424 --- [XNIO-1 task-8] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 09:22:30.890  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 09:22:32.054  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"sessionId":"0989ec0ae3773aab5f27856e56935c58","event":{"token":"9bf6d06056aa6092","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 09:22:32.069  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:22:32.543  INFO 15424 --- [XNIO-1 task-10] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 09:22:33.902  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 09:22:38.178  INFO 15424 --- [XNIO-1 task-12] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 09:22:39.242  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 09:23:09.663  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:23:09.672  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"543720471292674048"}
+2021-11-26 09:23:15.365  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:54847 -- CloseStatus[code=1006, reason=]
+2021-11-26 09:23:15.366  INFO 15424 --- [XNIO-1 I/O-3] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 09:23:29.528  INFO 15424 --- [XNIO-1 task-14] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:54866
+2021-11-26 09:23:29.534  INFO 15424 --- [XNIO-1 task-14] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:54866
+2021-11-26 09:23:31.644  INFO 15424 --- [XNIO-1 task-15] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 09:23:32.068  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 09:23:32.591  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"sessionId":"dea68d2bfa6d69b702e8f09496ca96ab","event":{"token":"085a1e7d8a2151dc","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 09:23:32.601  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:23:33.037  INFO 15424 --- [XNIO-1 task-17] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 09:23:33.807  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 09:23:37.860  INFO 15424 --- [XNIO-1 task-19] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 09:23:38.513  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 09:25:34.244  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:25:34.765  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAoQIAPFJpY2sgQXN0bGV5IC0gTmV2ZXIgR29ubmEgR2l2ZSBZb3UgVXAgKE9mZmljaWFsIE11c2ljIFZpZGVvKQALUmljayBBc3RsZXkAAAAAAAM8IAALZFF3NHc5V2dYY1EAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1kUXc0dzlXZ1hjUQAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:29:08.271  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : {"track":"QAAAlAIAL0JlZSBHZWVzIC0gU3RheWluJyBBbGl2ZSAoT2ZmaWNpYWwgTXVzaWMgVmlkZW8pAAtCZWVHZWVzVkVWTwAAAAAAA9CQAAtmTkZ6ZndMTTcyYwABACtodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PWZORnpmd0xNNzJjAAd5b3V0dWJlAAAAAAAAAAA=","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:35:48.494  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:54866 -- CloseStatus[code=1006, reason=]
+2021-11-26 09:35:48.495  INFO 15424 --- [XNIO-1 I/O-4] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 09:36:04.020  INFO 15424 --- [XNIO-1 task-21] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:57661
+2021-11-26 09:36:04.034  INFO 15424 --- [XNIO-1 task-21] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:57661
+2021-11-26 09:36:06.307  INFO 15424 --- [XNIO-1 task-22] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 09:36:06.799  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 09:36:07.927  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"sessionId":"ca7b3940e5385e7dd8028b050c599c0f","event":{"token":"085a1e7d8a2151dc","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 09:36:07.938  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:36:08.459  INFO 15424 --- [XNIO-1 task-24] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 09:36:09.334  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 09:36:09.745  INFO 15424 --- [XNIO-1 task-26] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 09:36:10.505  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 09:38:59.881  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:57661 -- CloseStatus[code=1006, reason=]
+2021-11-26 09:38:59.882  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2021-11-26 09:39:17.891  INFO 15424 --- [XNIO-1 task-28] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:57688
+2021-11-26 09:39:17.899  INFO 15424 --- [XNIO-1 task-28] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:57688
+2021-11-26 09:39:19.124  INFO 15424 --- [XNIO-1 task-29] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/Egzat98aCk4"
+2021-11-26 09:39:19.531  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Holy Shrimp's Fubuki Headbang Outro (30 minutes loop)
+2021-11-26 09:39:20.683  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"sessionId":"8958639191b34be6c6880c22b160b484","event":{"token":"085a1e7d8a2151dc","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 09:39:20.693  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : {"track":"QAAAngIANUhvbHkgU2hyaW1wJ3MgRnVidWtpIEhlYWRiYW5nIE91dHJvICgzMCBtaW51dGVzIGxvb3ApAA9Ib2x5IFNocmltcCBDaC4AAAAAACGlSAALRWd6YXQ5OGFDazQAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZ3phdDk4YUNrNAAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:39:21.269  INFO 15424 --- [XNIO-1 task-31] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/dQw4w9WgXcQ"
+2021-11-26 09:39:21.832  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Rick Astley - Never Gonna Give You Up (Official Music Video)
+2021-11-26 09:39:22.244  INFO 15424 --- [XNIO-1 task-1] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/fNFzfwLM72c"
+2021-11-26 09:39:22.753  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Bee Gees - Stayin' Alive (Official Music Video)
+2021-11-26 09:39:52.675  INFO 15424 --- [XNIO-1 task-3] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/5-aazdelI5c"
+2021-11-26 09:39:53.289  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Sword Art Online  Alicization Opening Full?LiSA   ADAMAS??ENG Sub?
+2021-11-26 09:40:52.078  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:57688 -- CloseStatus[code=1006, reason=]
+2021-11-26 09:40:52.084  INFO 15424 --- [XNIO-1 I/O-2] lavalink.server.io.SocketContext         : Shutting down 1 playing players.
+2021-11-26 09:41:04.305  INFO 15424 --- [XNIO-1 task-5] l.server.io.HandshakeInterceptorImpl     : Incoming connection from /0:0:0:0:0:0:0:1:57713
+2021-11-26 09:41:04.311  INFO 15424 --- [XNIO-1 task-5] lavalink.server.io.SocketServer          : Connection successfully established from /0:0:0:0:0:0:0:1:57713
+2021-11-26 09:41:14.607  INFO 15424 --- [XNIO-1 task-6] l.server.player.AudioLoaderRestHandler   : Got request to load for identifier "https://youtu.be/5-aazdelI5c"
+2021-11-26 09:41:14.962  INFO 15424 --- [lava-daemon-pool-info-loader-2-thread-1] lavalink.server.player.AudioLoader       : Loaded track Sword Art Online  Alicization Opening Full?LiSA   ADAMAS??ENG Sub?
+2021-11-26 09:41:16.064  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"sessionId":"55db4f86204964285fe82fedb8948240","event":{"token":"085a1e7d8a2151dc","guild_id":"543720471292674048","endpoint":"sydney7474.discord.media:443"},"op":"voiceUpdate","guildId":"543720471292674048"}
+2021-11-26 09:41:16.077  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"track":"QAAAqgIASlN3b3JkIEFydCBPbmxpbmUgIEFsaWNpemF0aW9uIE9wZW5pbmcgRnVsbOOAjkxpU0EgICBBREFNQVPjgI/jgJBFTkcgU3Vi44CRAAZLSUxMRVIAAAAAAANnGAALNS1hYXpkZWxJNWMAAQAraHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj01LWFhemRlbEk1YwAHeW91dHViZQAAAAAAAAAA","op":"play","guildId":"543720471292674048"}
+2021-11-26 09:41:48.055  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"op":"stop","guildId":"543720471292674048"}
+2021-11-26 09:41:48.078  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : {"op":"destroy","guildId":"543720471292674048"}
+2021-11-26 09:44:17.354  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketServer          : Connection closed from /0:0:0:0:0:0:0:1:57713 -- CloseStatus[code=1006, reason=]
+2021-11-26 09:44:17.355  INFO 15424 --- [XNIO-1 I/O-1] lavalink.server.io.SocketContext         : Shutting down 0 playing players.
+2021-11-26 10:16:27.409  INFO 15424 --- [Thread-1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-11-26 10:16:27.418  INFO 15424 --- [Thread-1] c.s.d.l.tools.GarbageCollectionMonitor   : GC monitoring disabled.
+2021-11-26 10:16:27.448  INFO 15424 --- [Thread-1] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'

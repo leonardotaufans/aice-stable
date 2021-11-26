@@ -1,4 +1,5 @@
-﻿using DSharpPlus;
+﻿using System.Threading;
+using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
@@ -20,7 +21,7 @@ using DSharpPlus.Interactivity.Enums;
 namespace aice_stable.commands
 {
     [ModuleLifespan(ModuleLifespan.Transient)]
-public class MusicCommandModule : BaseCommandModule
+    public class MusicCommandModule : BaseCommandModule
     {
         private static ImmutableDictionary<int, DiscordEmoji> NumberMappings { get; }
         private static ImmutableDictionary<DiscordEmoji, int> NumberMappingsReverse { get; }
@@ -84,7 +85,7 @@ public class MusicCommandModule : BaseCommandModule
             }
             this.MusicPlayer = await this.Music.GetOrCreateDataAsync(ctx.Guild);
             this.MusicPlayer.CommandChannel = ctx.Channel;              /// Still haven't figured out its uses.
-            await base.BeforeExecutionAsync(ctx);               
+            await base.BeforeExecutionAsync(ctx);
         }
 
         /// <summary>
@@ -122,24 +123,27 @@ public class MusicCommandModule : BaseCommandModule
             }
 
             var trackCount = tracks.Count();
+
             foreach (var track in tracks)
                 MusicPlayer.Enqueue(new MusicItem(track, ctx.Member));
 
             var voiceState = ctx.Member.VoiceState;
             var channel = voiceState.Channel;
             await MusicPlayer.CreatePlayerAsync(channel);
-            await MusicPlayer.PlayAsync();
+            await MusicPlayer.PlayAsync(ctx);
 
             if (trackCount > 1)
                 await ctx.RespondAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} " +
-                    $"Added {trackCount:#,##0} tracks to playback queue.");
+                    $"Added {trackCount:#,##0} tracks to playback queue." +
+                    $"\nTry to use command {Formatter.InlineCode($"{ctx.Prefix}nowplaying")} to use player buttons!");
             else
             {
                 var track = tracks.First();
+                //await ctx.RespondAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} Playback paused. Use {Formatter.InlineCode($"{ctx.Prefix}resume")} to resume playback.");
                 await ctx.RespondAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} " +
-                    $"Added {Formatter.Bold(Formatter.Sanitize(track.Title))} by {Formatter.Bold(Formatter.Sanitize(track.Author))} to the playback queue.");
+                    $"Added {Formatter.Bold(Formatter.Sanitize(track.Title))} by {Formatter.Bold(Formatter.Sanitize(track.Author))} to the playback queue." +
+                    $"\nTry to use command {Formatter.InlineCode($"{ctx.Prefix}nowplaying")} to use player buttons!");
             }
-
         }
         /// <summary>
         /// Plays the song using search
@@ -175,8 +179,8 @@ public class MusicCommandModule : BaseCommandModule
                 await message.ModifyAsync($"{DiscordEmoji.FromName(ctx.Client, ":msfrown:")} No choice was made.");
                 return;
             }
-            
             var resultIndex = answer.Result.Content.Trim();
+            await answer.Result.DeleteAsync();
             if (!int.TryParse(resultIndex, NumberStyles.Integer, CultureInfo.InvariantCulture, out var elInd))
             {
                 if (resultIndex.ToLowerInvariant() == "cancel")
@@ -233,19 +237,22 @@ public class MusicCommandModule : BaseCommandModule
             var voiceState = ctx.Member.VoiceState;
             var channel = voiceState.Channel;
             await MusicPlayer.CreatePlayerAsync(channel);
-            await MusicPlayer.PlayAsync();
+            await MusicPlayer.PlayAsync(ctx);
 
             if (trackCount > 1)
             {
-                await message.ModifyAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} Added {trackCount:#,##0} tracks to playback queue.");
+                await message.ModifyAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} Added {trackCount:#,##0} tracks to playback queue." +
+                                          $"\nTry to use command {Formatter.InlineCode($"{ctx.Prefix}nowplaying")} to use player buttons!");
             }
             else
             {
                 var track = tracks.First();
-                await message.ModifyAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} Added {Formatter.Bold(Formatter.Sanitize(track.Title))} by {Formatter.Bold(Formatter.Sanitize(track.Author))} to the playback queue.");
+                await message.ModifyAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} " +
+                    $"Added {Formatter.Bold(Formatter.Sanitize(track.Title))} by {Formatter.Bold(Formatter.Sanitize(track.Author))} to the playback queue." +
+                    $"\nTry to use command {Formatter.InlineCode($"{ctx.Prefix}nowplaying")} to use player buttons!");
             }
         }
-        
+
         /// <summary>
         /// Stops the song
         /// </summary>
@@ -256,9 +263,9 @@ public class MusicCommandModule : BaseCommandModule
         {
             int queue = this.MusicPlayer.PlaylistQueue();
             this.MusicPlayer.EmptyQueue();
-            await this.MusicPlayer.StopAsync();
+            await this.MusicPlayer.SkipOrStopAsync();
             await this.MusicPlayer.DestroyPlayerAsync();
-            await ctx.RespondAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} Removed {queue+1:#,##0} tracks from the queue.");
+            await ctx.RespondAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} Removed {queue + 1:#,##0} tracks from the queue.");
         }
 
         [Command("pause"), Description("Pauses playback.")]
@@ -279,7 +286,7 @@ public class MusicCommandModule : BaseCommandModule
         public async Task SkipAsync(CommandContext ctx)
         {
             var track = this.MusicPlayer.NowPlaying;
-            await this.MusicPlayer.StopAsync();
+            await this.MusicPlayer.SkipOrStopAsync();
             await ctx.RespondAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} {Formatter.Bold(Formatter.Sanitize(track.Track.Title))} by {Formatter.Bold(Formatter.Sanitize(track.Track.Author))} skipped.");
         }
 
@@ -318,7 +325,7 @@ public class MusicCommandModule : BaseCommandModule
         {
             if (mode == null)
             {
-                await ctx.RespondAsync($"Repeat options: \n```all | single | none```" + 
+                await ctx.RespondAsync($"Repeat options: \n```all | single | none```" +
                                         $"\nCurrent mode: {this.MusicPlayer.RepeatMode}");
                 var repeatModeConverter = new RepeatModeConverter();
                 repeatModeConverter.ToString(this.MusicPlayer.RepeatMode);
@@ -415,24 +422,145 @@ public class MusicCommandModule : BaseCommandModule
             await interactivity.SendPaginatedMessageAsync(ctx.Channel, ctx.User, pages, ems, PaginationBehaviour.Ignore, PaginationDeletion.KeepEmojis, TimeSpan.FromMinutes(2));
         }
 
-        [Command("nowplaying"), Description("Displays information about currently-played track."), Aliases("np")]
-        public async Task NowPlayingAsync(CommandContext ctx)
-        {
-            var track = this.MusicPlayer.NowPlaying;
-            if (this.MusicPlayer.NowPlaying.Track?.TrackString == null)
-            {
-                await ctx.RespondAsync($"Not playing.");
-            }
-            else
-            {
-                await ctx.RespondAsync($"Now playing: {Formatter.Bold(Formatter.Sanitize(track.Track.Title))} by {Formatter.Bold(Formatter.Sanitize(track.Track.Author))} [{this.MusicPlayer.GetCurrentPosition().ToDurationString()}/{this.MusicPlayer.NowPlaying.Track.Length.ToDurationString()}] requested by {Formatter.Bold(Formatter.Sanitize(this.MusicPlayer.NowPlaying.RequestedBy.DisplayName))}.");
-            }
-        }
-
         [Command("playerinfo"), Description("Displays information about current player."), Aliases("pinfo", "pinf"), Hidden]
         public async Task PlayerInfoAsync(CommandContext ctx)
         {
             await ctx.RespondAsync($"Queue length: {this.MusicPlayer.Queue.Count}\nIs shuffled? {(this.MusicPlayer.IsShuffled ? "Yes" : "No")}\nRepeat mode: {this.MusicPlayer.RepeatMode}\nVolume: {this.MusicPlayer.Volume}%");
+        }
+        //DEBUG
+
+        [Command("playdebug"), Description("Automatically plays 3 songs for debugging purposes.")]
+        public async Task PlayDebug(CommandContext ctx)
+        {
+            await PlayAsync(ctx, new System.Uri("https://youtu.be/Egzat98aCk4"));
+            await PlayAsync(ctx, new System.Uri("https://youtu.be/dQw4w9WgXcQ"));
+            await PlayAsync(ctx, new System.Uri("https://youtu.be/fNFzfwLM72c"));
+            await ctx.RespondAsync($"Enjoy.");
+        }
+
+        [Command("nowplaying"), Description("Displays information about currently-played track."), Aliases("npd2")]
+        public async Task NowPlayingAsync(CommandContext context)
+        {
+            var track = this.MusicPlayer.NowPlaying;
+            var shuffle = new DiscordButtonComponent(ButtonStyle.Success, "shuffleon", "Shuffle On");
+            var normal = new DiscordButtonComponent(ButtonStyle.Danger, "shuffleoff", "Shuffle Off");
+            var play = new DiscordButtonComponent(ButtonStyle.Secondary, "play", "Play");
+            var pause = new DiscordButtonComponent(ButtonStyle.Secondary, "pause", "Pause");
+            var skip = new DiscordButtonComponent(ButtonStyle.Secondary, "skip", "Skip");
+            var stop = new DiscordButtonComponent(ButtonStyle.Secondary, "stop", "Stop");
+            var playlist = new DiscordButtonComponent(ButtonStyle.Secondary, "playlist", "Playlist");
+            //bool isPlaying = this.MusicPlayer.IsPlaying;
+            //bool isFirstQueue = this.MusicPlayer.NowPlaying.ToTrackString() == this.MusicPlayer.Queue.First().ToTrackString();
+            //bool isLastQueue = this.MusicPlayer.NowPlaying.ToTrackString() == this.MusicPlayer.Queue.Last().ToTrackString();
+            //bool isShuffleQueue = this.MusicPlayer.IsShuffled;
+            var repeatMode = GetRepeatMode(context);
+            var component = new DiscordButtonComponent[]
+            {
+                    play,
+                    pause,
+                    skip,
+                    stop,
+            };
+            var betaInfo = await context.RespondAsync("This feature is still in development. Now playing is not updating!");
+            // Create the message
+            // $"Now playing: {Formatter.Bold(Formatter.Sanitize(track.Track.Title))} by {Formatter.Bold(Formatter.Sanitize(track.Track.Author))} [{this.MusicPlayer.GetCurrentPosition().ToDurationString()}/{this.MusicPlayer.NowPlaying.Track.Length.ToDurationString()}] requested by {Formatter.Bold(Formatter.Sanitize(this.MusicPlayer.NowPlaying.RequestedBy.DisplayName))}."
+            var builder = new DiscordMessageBuilder();
+            builder.WithContent($"Now Playing (when this command inititated): {this.MusicPlayer.NowPlaying.ToTrackString()}")
+                   .AddComponents(component);
+            var message = await builder.SendAsync(context.Channel);
+            await Task.Delay(3000).ContinueWith(async (task) => await context.Channel.DeleteMessageAsync(betaInfo));
+
+            // Basically the OnClick() function.
+            context.Client.ComponentInteractionCreated += async (s, e) =>
+            {
+                await e.Interaction.CreateResponseAsync(InteractionResponseType.DeferredMessageUpdate);
+                /// Shut up. I don't know why, but it refuses to work when using switch case or function.
+                /// Don't ask me. The dev is an idiot.
+                /// Not the API maker. I am.
+                if (e.Id == "play")
+                {
+                    await this.MusicPlayer.ResumeAsync();
+                    var msg = await e.Interaction.CreateFollowupMessageAsync(new DiscordFollowupMessageBuilder().WithContent("Play pressed!"));
+                    await Task.Delay(3000).ContinueWith(async (task) => await e.Interaction.DeleteFollowupMessageAsync(msg.Id));
+                }
+
+                else if (e.Id == "pause")
+                {
+                    if (!this.MusicPlayer.IsPlaying)
+                    {
+                        var errorNotFound = await context.Channel.SendMessageAsync("Not playing anything. Clearing buttons...");
+                        await e.Interaction.DeleteOriginalResponseAsync();
+                        await Task.Delay(3000).ContinueWith(async (task) => await context.Channel.DeleteMessageAsync(errorNotFound));
+                        return;
+                    }
+
+                    await this.MusicPlayer.PauseAsync();
+                    var msg = await e.Interaction.CreateFollowupMessageAsync(new DiscordFollowupMessageBuilder().WithContent("Pause pressed!"));
+                    await Task.Delay(3000).ContinueWith(async (task) => await e.Interaction.DeleteFollowupMessageAsync(msg.Id));
+                }
+
+                else if (e.Id == "skip")
+                {
+                    if (!this.MusicPlayer.IsPlaying)
+                    {
+                        var errorNotFound = await context.Channel.SendMessageAsync("Not playing anything. Clearing buttons...");
+                        await e.Interaction.DeleteOriginalResponseAsync();
+                        await Task.Delay(3000).ContinueWith(async (task) => await context.Channel.DeleteMessageAsync(errorNotFound));
+                        return;
+                    }
+                    await this.MusicPlayer.SkipOrStopAsync();
+                    if (this.MusicPlayer.Queue.Count == 0)
+                    {
+                        var response = await e.Interaction.CreateFollowupMessageAsync(new DiscordFollowupMessageBuilder().WithContent("Playlist empty! Destroying queue..."));
+                        await this.MusicPlayer.DestroyPlayerAsync();
+                        await e.Interaction.DeleteOriginalResponseAsync();
+                        await Task.Delay(3000).ContinueWith(async (task) => await context.Channel.DeleteMessageAsync(response));
+                    }
+                    var msg = await e.Interaction.CreateFollowupMessageAsync(new DiscordFollowupMessageBuilder().WithContent($"Now playing: {this.MusicPlayer.NowPlaying.ToTrackString()}"));
+                }
+
+                else if (e.Id == "stop")
+                {
+                    if (!this.MusicPlayer.IsPlaying)
+                    {
+                        var errorNotFound = await context.Channel.SendMessageAsync("Not playing anything. Clearing buttons...");
+                        await e.Interaction.DeleteOriginalResponseAsync();
+                        await Task.Delay(3000).ContinueWith(async (task) => await context.Channel.DeleteMessageAsync(errorNotFound));
+                        return;
+                    }
+                    await this.MusicPlayer.SkipOrStopAsync();
+                    await this.MusicPlayer.DestroyPlayerAsync();
+                    var msg = await e.Interaction.CreateFollowupMessageAsync(new DiscordFollowupMessageBuilder().WithContent("Stop pressed!"));
+                    await e.Interaction.DeleteOriginalResponseAsync();
+                    await Task.Delay(3000).ContinueWith(async (task) => await e.Interaction.DeleteFollowupMessageAsync(msg.Id));
+                }
+            };
+
+
+        }
+
+
+        private DiscordButtonComponent GetRepeatMode(CommandContext context)
+        {
+            var repeat = new DiscordButtonComponent(ButtonStyle.Success, "repeatAll", "Repeat All");
+            var repeatOne = new DiscordButtonComponent(ButtonStyle.Success, "repeatOne", "Repeat One");
+            var repeatNone = new DiscordButtonComponent(ButtonStyle.Secondary, "repeatNone", "Repeat None");
+
+            RepeatMode repeatMode = this.MusicPlayer.RepeatMode;
+            DiscordButtonComponent whichRepeatMode = repeatNone;
+            switch (repeatMode)
+            {
+                case RepeatMode.All:
+                    whichRepeatMode = repeat;
+                    break;
+                case RepeatMode.Single:
+                    whichRepeatMode = repeatOne;
+                    break;
+                case RepeatMode.None:
+                    whichRepeatMode = repeatNone;
+                    break;
+            }
+            return whichRepeatMode;
         }
     }
 }

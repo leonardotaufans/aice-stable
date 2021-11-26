@@ -8,13 +8,13 @@
     "mention_prefix": true,
     "message_cache_size": 512,
     "shards": 1,
-    "game": "with your heart </3"
+    "game": "with your heart </3 [DEBUG]"
   },
 
   "lavalink": {
     "hostname": "localhost",
     "port": 2333,
-    "password": "youshallnotpass"
+    "password": "1012ErichiaRenzii"
   },
 
   "youtube": {

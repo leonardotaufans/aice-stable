@@ -96,7 +96,7 @@ namespace aice_stable.services
             if (!MusicData.TryGetValue(e.Player.Guild.Id, out var gmd))
                 return;
 
-            await gmd.CommandChannel.SendMessageAsync($"{DiscordEmoji.FromName(this.discord, ":msfrown:")} A problem occured while playing {Formatter.Bold(Formatter.Sanitize(e.Track.Title))} by {Formatter.Bold(Formatter.Sanitize(e.Track.Author))}:\n{e.Error}");
+            await gmd.CommandChannel.SendMessageAsync($"{DiscordEmoji.FromName(this.discord, ":frowning:")} A problem occured while playing {Formatter.Bold(Formatter.Sanitize(e.Track.Title))} by {Formatter.Bold(Formatter.Sanitize(e.Track.Author))}:\n{e.Error}");
         }
     }
 }
