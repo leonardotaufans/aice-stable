@@ -1,2 +1,0 @@
-D:\aice-bin\aice-stable.pdb
-D:\aice-bin\aice-stable.exe
