@@ -3,22 +3,22 @@
     "config": 2
   },
   "discord": {
-    "token": "NjAzODQzMTkxMzc2MTgzMzA2.XTlSyw.pnfjeAZIKePBufs29mvtOj8UPz8",
+    "token": "FILL THIS WITH YOUR OWN TOKEN",
     "prefixes": [ "!" ],
     "mention_prefix": true,
     "message_cache_size": 512,
     "shards": 1,
-    "game": "with your heart </3 [DEBUG]"
+    "game": "Apex Legends"
   },
 
   "lavalink": {
     "hostname": "localhost",
     "port": 2333,
-    "password": "1012ErichiaRenzii"
+    "password": "WHAT IS THE PASSWORD, MY GUY"
   },
 
   "youtube": {
-    "api_key": "AIzaSyAR708k_ezGJ2hP-_L1FnxhjiqOBUKRgDQ"
+    "api_key": "NO YOU DID NOT SEE AN API KEY HERE"
   },
 
   "redis": {
