@@ -77,14 +77,20 @@ namespace aice_stable
                 .AddSingleton(new RedisClient(cfg.Redis))
                 .AddSingleton(this)
                 .BuildServiceProvider(true);
-
+            /// Request
             discord.MessageCreated += async (s, e) => 
             {
                 if (e.Message.Content.ToLower().Equals("pain")) 
                 {
                     await e.Message.RespondAsync("Pain-peko https://cdn.discordapp.com/attachments/879304880471298099/933247325319618570/f3ff0bfe160d84d6f85bb53c06319406.png");
                 }
+                if (e.Message.Content.ToLower().Equals("konpeko")) 
+                {
+                    await e.Message.RespondAsync("https://c.tenor.com/KnFPnSlq_AkAAAAd/konpeko.gif");
+                }
             };
+
+
             /// Use the CommandsNext plugin
             var commands = discord.UseCommandsNext(new CommandsNextConfiguration()
             {

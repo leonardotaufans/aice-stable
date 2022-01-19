@@ -74,7 +74,7 @@ namespace aice_stable.services
         /// Defaults to... that.
         /// </summary>
         [JsonProperty("token")]
-        public string Token { get; private set; } = "NjAzODQzMTkxMzc2MTgzMzA2.XTlSyw.pnfjeAZIKePBufs29mvtOj8UPz8";
+        public string Token { get; private set; } = "";
 
         /// <summary>
         /// Gets the default command prefixes of the bot.
@@ -137,7 +137,7 @@ namespace aice_stable.services
         /// Gets the API key for YouTube's data API.
         /// </summary>
         [JsonProperty("api_key")]
-        public string ApiKey { get; private set; } = "AIzaSyAR708k_ezGJ2hP-_L1FnxhjiqOBUKRgDQ";
+        public string ApiKey { get; private set; } = "";
     }
 
 }
