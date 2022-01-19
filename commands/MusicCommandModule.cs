@@ -84,7 +84,7 @@ namespace aice_stable.commands
                 return;
             }
             this.MusicPlayer = await this.Music.GetOrCreateDataAsync(ctx.Guild);
-            this.MusicPlayer.CommandChannel = ctx.Channel;              /// Still haven't figured out its uses.
+            this.MusicPlayer.CommandChannel = ctx.Channel;              /// The channel where the command was sent.
             await base.BeforeExecutionAsync(ctx);
         }
 
@@ -92,7 +92,7 @@ namespace aice_stable.commands
         /// Plays the song from a URL.
         /// </summary>
         /// <param name="ctx"></param>
-        /// <param name="uri"></param>
+        /// <param name="uri">The URI of the audio. It could even play audio outside of Youtube.</param>
         /// <returns></returns>
         [Command("play"), Description("Plays a song from URL or search."), Aliases("p"), Priority(1)]
         public async Task PlayAsync(CommandContext ctx, [Description("URL to play from.")] Uri uri)
@@ -262,10 +262,16 @@ namespace aice_stable.commands
         public async Task StopAsync(CommandContext ctx)
         {
             int queue = this.MusicPlayer.PlaylistQueue();
+            if (queue == 0) 
+            {
+                await ctx.RespondAsync($"Playlist is empty.");
+                return;
+            }
+            
+            await ctx.RespondAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} Removed {queue:#,##0} tracks from the queue.");
             this.MusicPlayer.EmptyQueue();
             await this.MusicPlayer.SkipOrStopAsync();
             await this.MusicPlayer.DestroyPlayerAsync();
-            await ctx.RespondAsync($"{DiscordEmoji.FromName(ctx.Client, ":ok_hand:")} Removed {queue + 1:#,##0} tracks from the queue.");
         }
 
         [Command("pause"), Description("Pauses playback.")]

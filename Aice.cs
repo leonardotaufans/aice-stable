@@ -72,13 +72,19 @@ namespace aice_stable
                 .AddTransient<SecureRandom>()
                 .AddSingleton<StandardCommandModule>()
                 .AddSingleton<MusicServices>()
-                .AddSingleton<NewMusicPlayerModule>()
                 .AddSingleton(new LavalinkService(cfg.Lavalink, discord))
                 .AddSingleton(new YoutubeSearchProvider(cfg.Youtube))
                 .AddSingleton(new RedisClient(cfg.Redis))
                 .AddSingleton(this)
                 .BuildServiceProvider(true);
 
+            discord.MessageCreated += async (s, e) => 
+            {
+                if (e.Message.Content.ToLower().Equals("pain")) 
+                {
+                    await e.Message.RespondAsync("Pain-peko https://cdn.discordapp.com/attachments/879304880471298099/933247325319618570/f3ff0bfe160d84d6f85bb53c06319406.png");
+                }
+            };
             /// Use the CommandsNext plugin
             var commands = discord.UseCommandsNext(new CommandsNextConfiguration()
             {
@@ -158,6 +164,8 @@ namespace aice_stable
 
                 if (guildMusicData.CommandChannel != null)
                 {
+                    guildMusicData.EmptyQueue();
+                    await guildMusicData.DestroyPlayerAsync();
                     await guildMusicData.CommandChannel.SendMessageAsync
                         ($"{DiscordEmoji.FromName(client, ":play_pause:")} All users left the channel. Stopping playback.");
                 }

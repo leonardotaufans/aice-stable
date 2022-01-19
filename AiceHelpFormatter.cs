@@ -18,7 +18,7 @@ namespace aice_stable
         {
             aice = bot;
             message = new StringBuilder();
-            this.message.AppendLine("```less")
+            this.message.AppendLine("```")
                 .AppendLine($"AICE bot v{bot.BotVersion}")
                 .AppendLine();
         }
