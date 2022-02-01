@@ -80,7 +80,7 @@ namespace aice_stable
             /// Request
             discord.MessageCreated += async (s, e) => 
             {
-                if (e.Message.Content.ToLower().Equals("pain")) 
+                if (e.Message.Content.ToLower().Equals("pain") || e.Message.Content.ToLower().Equals("pain peko") || e.Message.Content.ToLower().Equals("pain-peko") ) 
                 {
                     await e.Message.RespondAsync("Pain-peko https://cdn.discordapp.com/attachments/879304880471298099/933247325319618570/f3ff0bfe160d84d6f85bb53c06319406.png");
                 }
@@ -88,6 +88,11 @@ namespace aice_stable
                 {
                     await e.Message.RespondAsync("https://c.tenor.com/KnFPnSlq_AkAAAAd/konpeko.gif");
                 }
+                if (e.Message.Content.ToLower().Equals("hey moona")) 
+                {
+                    await e.Message.RespondAsync("https://youtu.be/xAnQKzvdHus");
+                }
+                
             };
 
 

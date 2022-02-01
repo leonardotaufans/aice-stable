@@ -534,6 +534,7 @@ namespace aice_stable.commands
                         await Task.Delay(3000).ContinueWith(async (task) => await context.Channel.DeleteMessageAsync(errorNotFound));
                         return;
                     }
+                    
                     await this.MusicPlayer.SkipOrStopAsync();
                     await this.MusicPlayer.DestroyPlayerAsync();
                     var msg = await e.Interaction.CreateFollowupMessageAsync(new DiscordFollowupMessageBuilder().WithContent("Stop pressed!"));

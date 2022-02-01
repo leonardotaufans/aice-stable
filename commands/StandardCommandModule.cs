@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
+using System.Collections;
 
 namespace aice_stable.commands
 {
@@ -56,6 +57,27 @@ namespace aice_stable.commands
             else
                 userTarget = user;
             await context.Channel.SendMessageAsync($"{userTarget.AvatarUrl}");
+        }
+
+        [Command("pekofy_debug"), Description("The Peko-Translator peko!")]
+        public async Task PekoTranslator(CommandContext context, [RemainingText, Description("Text to be translated peko")] string text)
+        {
+            var processingMsg = await context.Channel.SendMessageAsync("Processing...");
+            ArrayList locations = new ArrayList();
+            // Appends "ko" where "pe" is found.
+            string target = "pe";
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (text.Substring(i, i + 1) == target)
+                {
+                    locations.Add(i.ToString());
+                    i++;
+                }
+            }
+            string result = "";
+            result = string.Join(",", locations);
+
+            await context.RespondAsync($"Pekolocations: {result}");
         }
     }
 }
