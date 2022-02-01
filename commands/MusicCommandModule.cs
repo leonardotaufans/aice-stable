@@ -262,7 +262,8 @@ namespace aice_stable.commands
         public async Task StopAsync(CommandContext ctx)
         {
             int queue = this.MusicPlayer.PlaylistQueue();
-            if (queue == 0) 
+            bool isPlaying = this.MusicPlayer.IsPlaying;
+            if (queue == 0 && !isPlaying) 
             {
                 await ctx.RespondAsync($"Playlist is empty.");
                 return;
@@ -471,7 +472,7 @@ namespace aice_stable.commands
             // Create the message
             // $"Now playing: {Formatter.Bold(Formatter.Sanitize(track.Track.Title))} by {Formatter.Bold(Formatter.Sanitize(track.Track.Author))} [{this.MusicPlayer.GetCurrentPosition().ToDurationString()}/{this.MusicPlayer.NowPlaying.Track.Length.ToDurationString()}] requested by {Formatter.Bold(Formatter.Sanitize(this.MusicPlayer.NowPlaying.RequestedBy.DisplayName))}."
             var builder = new DiscordMessageBuilder();
-            builder.WithContent($"Now Playing (when this command inititated): {this.MusicPlayer.NowPlaying.ToTrackString()}")
+            builder.WithContent($"Now Playing: {this.MusicPlayer.NowPlaying.ToTrackString()}")
                    .AddComponents(component);
             var message = await builder.SendAsync(context.Channel);
             await Task.Delay(3000).ContinueWith(async (task) => await context.Channel.DeleteMessageAsync(betaInfo));

@@ -80,7 +80,8 @@ namespace aice_stable
             /// Request
             discord.MessageCreated += async (s, e) => 
             {
-                if (e.Message.Content.ToLower().Equals("pain") || e.Message.Content.ToLower().Equals("pain peko") || e.Message.Content.ToLower().Equals("pain-peko") ) 
+                ///todo: Use external files to deal with this mess if possible
+                if (e.Message.Content.ToLower().Equals("pain")) 
                 {
                     await e.Message.RespondAsync("Pain-peko https://cdn.discordapp.com/attachments/879304880471298099/933247325319618570/f3ff0bfe160d84d6f85bb53c06319406.png");
                 }
@@ -93,6 +94,15 @@ namespace aice_stable
                     await e.Message.RespondAsync("https://youtu.be/xAnQKzvdHus");
                 }
                 
+                if (e.Message.Content.ToLower().Equals("ehe"))
+                {
+                    await e.Message.RespondAsync("https://c.tenor.com/cZHoFqQEgwkAAAAC/paimon.gif");
+                }
+                                                 
+                if (e.Message.Content.ToLower().Equals("oghey"))
+                {
+                    await e.Message.RespondAsync("RRAT");
+                }
             };
 
 
@@ -169,7 +179,7 @@ namespace aice_stable
                 return;
 
             var users = channel.Users;
-            if (guildMusicData.IsPlaying && !users.Any(x => !x.IsBot))
+            if (!users.Any(x => !x.IsBot))
             {
                 await guildMusicData.SkipOrStopAsync();
 
