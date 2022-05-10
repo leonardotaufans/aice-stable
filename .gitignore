@@ -361,13 +361,9 @@ MigrationBackup/
 .ionide/
 
 # Fody - auto-generated XML schema
-<<<<<<< Updated upstream
-FodyWeavers.xsd
-=======
 FodyWeavers.xsd
 
 # Configuration files
 application.yml
 Lavalink.jar
 config.json
->>>>>>> Stashed changes
