@@ -365,5 +365,7 @@ FodyWeavers.xsd
 
 # Configuration files
 application.yml
+application.yml.bak
 Lavalink.jar
 config.json
+config.json.bak
