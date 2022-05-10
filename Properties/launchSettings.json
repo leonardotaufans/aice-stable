@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "aice-stable": {
+      "commandName": "Project",
+      "workingDirectory": "D:\\aice-stable"
+    }
+  }
+}

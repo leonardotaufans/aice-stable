@@ -1,0 +1,30 @@
+{
+  "version": {
+    "config": 2
+  },
+  "discord": {
+    "token": "NjAzODQzMTkxMzc2MTgzMzA2.XTlSyw.DKJlF4BUTfYEweKkrrQFqyIOKG8",
+    "prefixes": [ "?" ],
+    "mention_prefix": true,
+    "message_cache_size": 512,
+    "shards": 1,
+    "game": "DEBUG MODE"
+  },
+
+  "lavalink": {
+    "hostname": "localhost",
+    "port": 2333,
+    "password": "WHAT IS THE PASSWORD, MY GUY"
+  },
+
+  "youtube": {
+    "api_key": "AIzaSyAR708k_ezGJ2hP-_L1FnxhjiqOBUKRgDQ"
+  },
+
+  "redis": {
+    "hostname": "127.0.0.1",
+    "port": 6379,
+    "password": null,
+    "ssl": false
+  }
+}
