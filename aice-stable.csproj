@@ -5,10 +5,9 @@
 		<RootNamespace>aice_stable</RootNamespace>
 		<TargetIdentifier>win10-x64,linux-x64</TargetIdentifier>
 		<PublishSingleFile>true</PublishSingleFile>
-		<RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+		<RuntimeIdentifier>win10-x64</RuntimeIdentifier>
     	<SelfContained>true</SelfContained>
-		<Version>1.4.1</Version>
-
+		<Version>1.4.3</Version>
 		<Authors>leonardotaufans</Authors>
 		<Company>NoliveID</Company>
 	</PropertyGroup>
@@ -19,11 +18,11 @@
 		<NoWarn />
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="DSharpPlus" Version="4.1.0" />
-		<PackageReference Include="DSharpPlus.CommandsNext" Version="4.1.0" />
-		<PackageReference Include="DSharpPlus.Interactivity" Version="4.1.0" />
-		<PackageReference Include="DSharpPlus.VoiceNext" Version="4.1.0" />
-		<PackageReference Include="DSharpPlus.Lavalink" Version="4.1.0" />
-		<PackageReference Include="StackExchange.Redis" Version="2.2.62" />
+		<PackageReference Include="DSharpPlus" Version="4.2.0" />
+		<PackageReference Include="DSharpPlus.CommandsNext" Version="4.2.0" />
+		<PackageReference Include="DSharpPlus.Interactivity" Version="4.2.0" />
+		<PackageReference Include="DSharpPlus.VoiceNext" Version="4.2.0" />
+		<PackageReference Include="DSharpPlus.Lavalink" Version="4.2.0" />
+		<PackageReference Include="StackExchange.Redis" Version="2.5.61" />
 	</ItemGroup>
 </Project>
