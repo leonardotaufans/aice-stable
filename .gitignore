@@ -17,10 +17,7 @@
 mono_crash.*
 
 # Build results
-<<<<<<< Updated upstream
 obj/
-=======
->>>>>>> Stashed changes
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
